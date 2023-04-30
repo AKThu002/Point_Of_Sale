@@ -156,6 +156,7 @@ public class BusinessPartner extends javax.swing.JFrame {
 
         lbl_BPID.setText("ID");
 
+        txt_BPID.setEditable(false);
         txt_BPID.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
         lbl_BPName.setText("Name");
@@ -451,6 +452,7 @@ public class BusinessPartner extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_SaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_SaveActionPerformed
