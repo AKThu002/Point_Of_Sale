@@ -395,14 +395,14 @@ public class BusinessPartner extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Branch ID", "Branch Name"
+                "ID", "Name", "Class", "Group", "Type"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.String.class
+                java.lang.Integer.class, java.lang.String.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false
+                false, false, false, true, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -414,10 +414,6 @@ public class BusinessPartner extends javax.swing.JFrame {
             }
         });
         jScrollPane1.setViewportView(tbl_BP);
-        if (tbl_BP.getColumnModel().getColumnCount() > 0) {
-            tbl_BP.getColumnModel().getColumn(0).setPreferredWidth(100);
-            tbl_BP.getColumnModel().getColumn(1).setPreferredWidth(400);
-        }
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -497,7 +493,6 @@ public class BusinessPartner extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_exitActionPerformed
 
     private void btn_prevActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_prevActionPerformed
-        prevID = Integer.valueOf(txt_BPID.getText()) - 1;
         try{
             GetQuery("prev");
         }catch(SQLException e){
@@ -506,7 +501,6 @@ public class BusinessPartner extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_prevActionPerformed
 
     private void btn_nextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_nextActionPerformed
-        nextID = Integer.valueOf(txt_BPID.getText()) + 1;
         try{
             GetQuery("next");
         }catch(SQLException e){
@@ -554,17 +548,27 @@ public class BusinessPartner extends javax.swing.JFrame {
     private void getallData(){
         try  {
 
-           String sqlSelectDataFromDatabase = "Select \"BP_ID\", \"BP_NAME\" from \"BP_TBL\" order by \"BP_ID\" asc";
+           String sqlSelectDataFromDatabase = "Select"
+                                            + "\"BP_ID\""
+                                            + ",\"BP_NAME\""
+                                            + ",\"BP_CLASS\""
+                                            + ",\"BP_GROUP\""
+                                            + ",\"BP_TYPE\""
+                                            + ",\"BP_EMAIL\""
+                                            + "from \"BP_TBL\" order by \"BP_ID\" asc";
            preStatement = dbconnection.prepareStatement(sqlSelectDataFromDatabase);
            result = preStatement.executeQuery();
            clearTable(); // To Clear Existing Data
            while(result.next()) {
                String BPName = result.getString("BP_ID");
                String BPID = result.getString("BP_NAME");
-           
+               int BPClass = result.getInt("BP_CLASS");
+               int BPGroup = result.getInt("BP_GROUP");
+               int BPType = result.getInt("BP_TYPE");
+               String BPEmail = result.getString("BP_EMAIL");
 
                DefaultTableModel dftable = (DefaultTableModel) tbl_BP.getModel();
-               Object[] obj = {BPName,BPID};
+               Object[] obj = {BPName,BPID,bpClassArr[BPClass],bpGroupArr[BPGroup],bpTypeArr[BPType],BPEmail};
                dftable.addRow(obj);
                    }
              } catch (SQLException e) {
@@ -591,26 +595,38 @@ public class BusinessPartner extends javax.swing.JFrame {
             //2.get the user entered data
             bpID = txt_BPID.getText();
             bpName = txt_BPName.getText();
-            System.out.println(txt_BPID.getText());
+            bpClass = cbox_BPClass.getSelectedIndex();
+            bpGroup = cbox_BPGroup.getSelectedIndex();
+            bpType = cbox_BPType.getSelectedIndex();
             
             //3.checking query type to execute
             if(queryType=="S"){
                 query = "INSERT INTO \"BP_TBL\" ("
-                        + "\"BP_ID\","
-                        + "\"BP_NAME\""
+                        + "\"BP_ID\""
+                        + ",\"BP_NAME\""
+                        + ",\"BP_CLASS\""
+                        + ",\"BP_GROUP\""
+                        + ",\"BP_TYPE\""
                         + ") VALUES ("
-                        + bpID + ","
-                        + "'" + bpName +"'"
+                        + bpID
+                        + "," + "'" + bpName + "'"
+                        + "," + bpClass 
+                        + "," + bpGroup
+                        + "," + bpType 
                         + ");";
             } else if (queryType=="U"){
                 query = "UPDATE \"BP_TBL\" SET "
                         + "\"BP_NAME\"='" + bpName + "'"
+                        + "\"BP_CLASS\"='" + bpClass + "'"
+                        + "\"BP_GROUP\"='" + bpGroup + "'"
+                        + "\"BP_TYPE\"='" + bpType + "'"
                         + "WHERE \"BP_ID\"="+ bpID + "; ";
             } else if (queryType=="D"){
                 query = "DELETE FROM \"BP_TBL\" WHERE \"BP_ID\" = " + bpID + ";";
             }
             
             //4.execute query
+            System.out.println(query);
             statement.execute(query);
             connection.Conn.close();
         } catch(SQLException e){
@@ -626,24 +642,62 @@ public class BusinessPartner extends javax.swing.JFrame {
             DatabaseConnection connection = new DatabaseConnection();
             connection.databaseConn();
             Statement statement = connection.Conn.createStatement();
-            
+                       
             //2.checking query type to execute
             if(queryType=="first"){
-                query = "SELECT \"BP_ID\", \"BP_NAME\"FROM \"BP_TBL\"ORDER BY \"BP_ID\" ASC LIMIT 1;";
+                query = "SELECT"
+                        + "\"BP_ID\""
+                        + ",\"BP_NAME\""
+                        + ",\"BP_CLASS\""
+                        + ",\"BP_GROUP\""
+                        + ",\"BP_TYPE\""
+                        + "FROM \"BP_TBL\"ORDER BY \"BP_ID\" ASC LIMIT 1;";
             }else if(queryType=="last"){
-                query = "SELECT \"BP_ID\", \"BP_NAME\"FROM \"BP_TBL\"ORDER BY \"BP_ID\" DESC LIMIT 1;";
+                query = "SELECT"
+                        + "\"BP_ID\""
+                        + ",\"BP_NAME\""
+                        + ",\"BP_CLASS\""
+                        + ",\"BP_GROUP\""
+                        + ",\"BP_TYPE\""
+                        + "FROM \"BP_TBL\"ORDER BY \"BP_ID\" DESC LIMIT 1;";
             }else if(queryType=="next"){
                 if(txt_BPID.getText().isEmpty()){
-                    query = "SELECT \"BP_ID\", \"BP_NAME\"FROM \"BP_TBL\"ORDER BY \"BP_ID\" ASC LIMIT 1;";
+                    query = "SELECT"
+                            + "\"BP_ID\""
+                            + ",\"BP_NAME\""
+                            + ",\"BP_CLASS\""
+                            + ",\"BP_GROUP\""
+                            + ",\"BP_TYPE\""
+                            + "FROM \"BP_TBL\"ORDER BY \"BP_ID\" ASC LIMIT 1;";
                 }else{
-                    query = "SELECT \"BP_ID\", \"BP_NAME\" FROM \"BP_TBL\" where \"BP_ID\" = "
+                    nextID = Integer.valueOf(txt_BPID.getText()) + 1;
+                    query = "SELECT"
+                            + "\"BP_ID\","
+                            + "\"BP_NAME\","
+                            + "\"BP_CLASS\","
+                            + "\"BP_GROUP\","
+                            + "\"BP_TYPE\""
+                            + " FROM \"BP_TBL\" where \"BP_ID\" = "
                             + nextID +";";
                 }
             }else if(queryType=="prev"){
                 if(txt_BPID.getText().isEmpty()){
-                    query = "SELECT \"BP_ID\", \"BP_NAME\"FROM \"BP_TBL\"ORDER BY \"BP_ID\" DESC LIMIT 1;";
+                    query = "SELECT"
+                            + "\"BP_ID\","
+                            + "\"BP_NAME\","
+                            + "\"BP_CLASS\","
+                            + "\"BP_GROUP\","
+                            + "\"BP_TYPE\""
+                            + "FROM \"BP_TBL\"ORDER BY \"BP_ID\" DESC LIMIT 1;";
                 }else{
-                    query = "SELECT \"BP_ID\", \"BP_NAME\" FROM \"BP_TBL\" where \"BP_ID\" = "
+                    prevID = Integer.valueOf(txt_BPID.getText()) - 1;
+                    query = "SELECT"
+                            + "\"BP_ID\","
+                            + "\"BP_NAME\","
+                            + "\"BP_CLASS\","
+                            + "\"BP_GROUP\","
+                            + "\"BP_TYPE\""
+                            + "FROM \"BP_TBL\" where \"BP_ID\" = "
                             + prevID +";";
                 }
             }
@@ -653,6 +707,10 @@ public class BusinessPartner extends javax.swing.JFrame {
             if(result.next()){
                 txt_BPID.setText(result.getString("BP_ID"));
                 txt_BPName.setText(result.getString("BP_NAME"));
+                cbox_BPClass.setSelectedIndex(result.getInt("BP_Class"));
+                cbox_BPGroup.setSelectedIndex(result.getInt("BP_Group"));
+                cbox_BPType.setSelectedIndex(result.getInt("BP_Type"));
+                
             }
             
         }catch(SQLException e){
@@ -764,10 +822,14 @@ public class BusinessPartner extends javax.swing.JFrame {
     Connection dbconnection;
     int nextID;
     int prevID;
+    String[] bpClassArr = {"", "Supplier", "Employee", "Customer"};
+    String[] bpGroupArr = {"", "Gp-1", "Gp-2", "Gp-3"};
+    String[] bpTypeArr = {"", "Type-1", "Type-2", "Type-3"};
     String bpID;
     String bpName;
     int bpType;
     int bpGroup;
     int bpClass;
+    String bpEmail;
 
 }

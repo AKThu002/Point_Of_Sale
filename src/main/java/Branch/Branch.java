@@ -346,8 +346,7 @@ public class Branch extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_delActionPerformed
 
     private void btn_prevActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_prevActionPerformed
-        prevID = Integer.valueOf(txt_branchID.getText()) - 1;
-        try{
+                try{
             GetQuery("prev");
         }catch(SQLException e){
             printSQLException(e);
@@ -355,7 +354,7 @@ public class Branch extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_prevActionPerformed
 
     private void btn_nextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_nextActionPerformed
-        nextID = Integer.valueOf(txt_branchID.getText()) + 1;
+        
         try{
             GetQuery("next");
         }catch(SQLException e){
@@ -481,6 +480,7 @@ public class Branch extends javax.swing.JFrame {
                 if(txt_branchID.getText().isEmpty()){
                     query = "SELECT \"BRCH_ID\", \"BRCH_NAME\"FROM \"BRCH_TBL\"ORDER BY \"BRCH_ID\" ASC LIMIT 1;";
                 }else{
+                    nextID = Integer.valueOf(txt_branchID.getText()) + 1;
                     query = "SELECT \"BRCH_ID\", \"BRCH_NAME\" FROM \"BRCH_TBL\" where \"BRCH_ID\" = "
                             + nextID +";";
                 }
@@ -488,6 +488,7 @@ public class Branch extends javax.swing.JFrame {
                 if(txt_branchID.getText().isEmpty()){
                     query = "SELECT \"BRCH_ID\", \"BRCH_NAME\"FROM \"BRCH_TBL\"ORDER BY \"BRCH_ID\" DESC LIMIT 1;";
                 }else{
+                    prevID = Integer.valueOf(txt_branchID.getText()) - 1;
                     query = "SELECT \"BRCH_ID\", \"BRCH_NAME\" FROM \"BRCH_TBL\" where \"BRCH_ID\" = "
                             + prevID +";";
                 }
