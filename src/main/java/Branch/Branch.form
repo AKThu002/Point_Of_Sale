@@ -306,9 +306,7 @@
       <SubComponents>
         <Component class="javax.swing.JButton" name="btn_prev">
           <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\AKThu\Desktop\Dummy Folder\1. Java Swing POS\Company Data\prev.png"/>
-            </Property>
+            <Property name="text" type="java.lang.String" value="&lt;"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_prevActionPerformed"/>
@@ -316,9 +314,7 @@
         </Component>
         <Component class="javax.swing.JButton" name="btn_next">
           <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\AKThu\Desktop\Dummy Folder\1. Java Swing POS\Company Data\next.png"/>
-            </Property>
+            <Property name="text" type="java.lang.String" value="&gt;"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_nextActionPerformed"/>
@@ -326,9 +322,7 @@
         </Component>
         <Component class="javax.swing.JButton" name="btn_last">
           <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\AKThu\Desktop\Dummy Folder\1. Java Swing POS\Company Data\right.png"/>
-            </Property>
+            <Property name="text" type="java.lang.String" value="l"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_lastActionPerformed"/>
@@ -336,9 +330,7 @@
         </Component>
         <Component class="javax.swing.JButton" name="btn_first">
           <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\AKThu\Desktop\Dummy Folder\1. Java Swing POS\Company Data\left.png"/>
-            </Property>
+            <Property name="text" type="java.lang.String" value="f"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_firstActionPerformed"/>

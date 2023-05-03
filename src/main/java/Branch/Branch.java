@@ -202,28 +202,28 @@ public class Branch extends javax.swing.JFrame {
             tbl_branch.getColumnModel().getColumn(1).setPreferredWidth(366);
         }
 
-        btn_prev.setIcon(new javax.swing.ImageIcon("C:\\Users\\AKThu\\Desktop\\Dummy Folder\\1. Java Swing POS\\Company Data\\prev.png")); // NOI18N
+        btn_prev.setText("<");
         btn_prev.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_prevActionPerformed(evt);
             }
         });
 
-        btn_next.setIcon(new javax.swing.ImageIcon("C:\\Users\\AKThu\\Desktop\\Dummy Folder\\1. Java Swing POS\\Company Data\\next.png")); // NOI18N
+        btn_next.setText(">");
         btn_next.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_nextActionPerformed(evt);
             }
         });
 
-        btn_last.setIcon(new javax.swing.ImageIcon("C:\\Users\\AKThu\\Desktop\\Dummy Folder\\1. Java Swing POS\\Company Data\\right.png")); // NOI18N
+        btn_last.setText("l");
         btn_last.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_lastActionPerformed(evt);
             }
         });
 
-        btn_first.setIcon(new javax.swing.ImageIcon("C:\\Users\\AKThu\\Desktop\\Dummy Folder\\1. Java Swing POS\\Company Data\\left.png")); // NOI18N
+        btn_first.setText("f");
         btn_first.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_firstActionPerformed(evt);
