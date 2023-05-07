@@ -1,6 +1,8 @@
-package test;
+package inventory;
 
-
+import UOM.*;
+import Tax.*;
+import CompanyData.*;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -10,16 +12,10 @@ import javax.swing.JOptionPane;
 
 public class databaseConnection {
    Connection Conn = null;
-   String url = "jdbc:postgresql://localhost/POS_DB";
+   String url = "jdbc:postgresql://localhost/POS";
    String user = "postgres";
    String password = "postgre";
    public Connection databaseConn() {
-
-//       try {
-//           Class.forName("org.postgresql.Driver");
-//       } catch (ClassNotFoundException ex) {
-//           Logger.getLogger(databaseConnection.class.getName()).log(Level.SEVERE, null, ex);
-//       }
 
        try {
            Conn = DriverManager.getConnection(url, user, password);
@@ -36,5 +32,5 @@ public class databaseConnection {
    databaseConnection connDatabase = new databaseConnection();
    connDatabase.databaseConn();
    }
-
+   
 }
