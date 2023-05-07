@@ -303,72 +303,35 @@ public class Location extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_prevActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_prevActionPerformed
-        try{
-            GetQuery("prev");
-        }catch(SQLException e){
-            printSQLException(e);
-        }
+
     }//GEN-LAST:event_btn_prevActionPerformed
 
     private void btn_nextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_nextActionPerformed
-        try{
-            GetQuery("next");
-        }catch(SQLException e){
-            printSQLException(e);
-        }
+
     }//GEN-LAST:event_btn_nextActionPerformed
 
     private void btn_lastActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_lastActionPerformed
-        try{
-            GetQuery("last");
-        }catch(SQLException e){
-            printSQLException(e);
-        }
+
     }//GEN-LAST:event_btn_lastActionPerformed
 
     private void btn_firstActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_firstActionPerformed
-        try{
-            GetQuery("first");
-        }catch(SQLException e){
-            printSQLException(e);
-        }
+
     }//GEN-LAST:event_btn_firstActionPerformed
 
     private void btn_SaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_SaveActionPerformed
-        try{
-            ExecuteQuery("S");
-            JOptionPane.showMessageDialog(null, "Saved Successfully");
-            this.clear(evt);
-            getallData();
-        }catch(SQLException e){
-            printSQLException(e);
-        }
+
     }//GEN-LAST:event_btn_SaveActionPerformed
 
     private void btn_clearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_clearActionPerformed
-        this.clear(evt);
+
     }//GEN-LAST:event_btn_clearActionPerformed
 
     private void btn_delActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_delActionPerformed
-        try{
-            ExecuteQuery("D");
-            JOptionPane.showMessageDialog(null, "Deleted Successfully");
-            this.clear(evt);
-            getallData();
-        }catch(SQLException e){
-            printSQLException(e);
-        }
+
     }//GEN-LAST:event_btn_delActionPerformed
 
     private void btn_updateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_updateActionPerformed
-        try{
-            ExecuteQuery("U");
-            JOptionPane.showMessageDialog(null, "Updated Successfully");
-            this.clear(evt);
-            getallData();
-        }catch(SQLException e){
-            printSQLException(e);
-        }
+
     }//GEN-LAST:event_btn_updateActionPerformed
 
     private void btn_exitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_exitActionPerformed
