@@ -26,21 +26,422 @@ public class Inventory extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        pnl_actionButtons = new javax.swing.JPanel();
+        btn_Save = new javax.swing.JButton();
+        btn_clear = new javax.swing.JButton();
+        btn_del = new javax.swing.JButton();
+        btn_update = new javax.swing.JButton();
+        btn_exit = new javax.swing.JButton();
+        pnl_form = new javax.swing.JPanel();
+        lbl_BPID = new javax.swing.JLabel();
+        txt_BPID = new javax.swing.JTextField();
+        lbl_BPName = new javax.swing.JLabel();
+        txt_BPName = new javax.swing.JTextField();
+        lbl_BPType = new javax.swing.JLabel();
+        lbl_BPGroup = new javax.swing.JLabel();
+        lbl_BPClass = new javax.swing.JLabel();
+        lbl_BPEmail = new javax.swing.JLabel();
+        lbl_BPPhone = new javax.swing.JLabel();
+        lbl_BPTownship = new javax.swing.JLabel();
+        cbox_BPType = new javax.swing.JComboBox<>();
+        cbox_BPGroup = new javax.swing.JComboBox<>();
+        cbox_BPClass = new javax.swing.JComboBox<>();
+        cbox_BPType1 = new javax.swing.JComboBox<>();
+        cbox_BPType2 = new javax.swing.JComboBox<>();
+        cbox_BPType3 = new javax.swing.JComboBox<>();
+        pnl_Header = new javax.swing.JPanel();
+        lbl_BusinessPartner = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tbl_BP = new javax.swing.JTable();
+        pnl_navigationButtons = new javax.swing.JPanel();
+        btn_prev = new javax.swing.JButton();
+        btn_next = new javax.swing.JButton();
+        btn_last = new javax.swing.JButton();
+        btn_first = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        btn_Save.setText("Save");
+        btn_Save.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btn_Save.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_SaveActionPerformed(evt);
+            }
+        });
+
+        btn_clear.setText("Clear");
+        btn_clear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_clearActionPerformed(evt);
+            }
+        });
+
+        btn_del.setText("Delete");
+        btn_del.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_delActionPerformed(evt);
+            }
+        });
+
+        btn_update.setText("Update");
+        btn_update.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_updateActionPerformed(evt);
+            }
+        });
+
+        btn_exit.setText("Exit");
+        btn_exit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_exitActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout pnl_actionButtonsLayout = new javax.swing.GroupLayout(pnl_actionButtons);
+        pnl_actionButtons.setLayout(pnl_actionButtonsLayout);
+        pnl_actionButtonsLayout.setHorizontalGroup(
+            pnl_actionButtonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_actionButtonsLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(btn_Save)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btn_clear)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btn_update)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btn_del)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btn_exit)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        pnl_actionButtonsLayout.setVerticalGroup(
+            pnl_actionButtonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_actionButtonsLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnl_actionButtonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_actionButtonsLayout.createSequentialGroup()
+                        .addComponent(btn_Save, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())
+                    .addGroup(pnl_actionButtonsLayout.createSequentialGroup()
+                        .addGroup(pnl_actionButtonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(btn_clear, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 32, Short.MAX_VALUE)
+                            .addComponent(btn_update, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btn_del, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btn_exit, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+        );
+
+        lbl_BPID.setText("ID");
+
+        txt_BPID.setEditable(false);
+        txt_BPID.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+
+        lbl_BPName.setText("Name");
+
+        txt_BPName.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+
+        lbl_BPType.setText("Type");
+
+        lbl_BPGroup.setText("Group");
+
+        lbl_BPClass.setText("Item Class");
+
+        lbl_BPEmail.setText("Base UOM");
+
+        lbl_BPPhone.setText("Sales UOM");
+
+        lbl_BPTownship.setText("Purchase UOM");
+
+        cbox_BPType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select", "Supplier", "Employee", "Customer" }));
+        cbox_BPType.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbox_BPTypeActionPerformed(evt);
+            }
+        });
+
+        cbox_BPGroup.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        cbox_BPClass.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        cbox_BPType1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select", "Supplier", "Employee", "Customer" }));
+        cbox_BPType1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbox_BPType1ActionPerformed(evt);
+            }
+        });
+
+        cbox_BPType2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select", "Supplier", "Employee", "Customer" }));
+        cbox_BPType2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbox_BPType2ActionPerformed(evt);
+            }
+        });
+
+        cbox_BPType3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select", "Supplier", "Employee", "Customer" }));
+        cbox_BPType3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbox_BPType3ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout pnl_formLayout = new javax.swing.GroupLayout(pnl_form);
+        pnl_form.setLayout(pnl_formLayout);
+        pnl_formLayout.setHorizontalGroup(
+            pnl_formLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_formLayout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addGroup(pnl_formLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(lbl_BPEmail)
+                    .addComponent(lbl_BPType)
+                    .addComponent(lbl_BPPhone)
+                    .addComponent(lbl_BPTownship)
+                    .addComponent(lbl_BPName)
+                    .addComponent(lbl_BPID))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pnl_formLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txt_BPID, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(txt_BPName)
+                    .addGroup(pnl_formLayout.createSequentialGroup()
+                        .addComponent(cbox_BPType, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(lbl_BPGroup)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(cbox_BPGroup, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(lbl_BPClass)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(cbox_BPClass, 0, 101, Short.MAX_VALUE))
+                    .addComponent(cbox_BPType1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(cbox_BPType2, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(cbox_BPType3, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        pnl_formLayout.setVerticalGroup(
+            pnl_formLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_formLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnl_formLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl_BPID)
+                    .addComponent(txt_BPID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pnl_formLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txt_BPName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_BPName))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pnl_formLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl_BPType)
+                    .addComponent(lbl_BPGroup)
+                    .addComponent(lbl_BPClass)
+                    .addComponent(cbox_BPType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cbox_BPGroup, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cbox_BPClass, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pnl_formLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cbox_BPType1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_BPEmail))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pnl_formLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cbox_BPType2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_BPPhone))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pnl_formLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cbox_BPType3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_BPTownship))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        lbl_BusinessPartner.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        lbl_BusinessPartner.setText("Inventory");
+
+        javax.swing.GroupLayout pnl_HeaderLayout = new javax.swing.GroupLayout(pnl_Header);
+        pnl_Header.setLayout(pnl_HeaderLayout);
+        pnl_HeaderLayout.setHorizontalGroup(
+            pnl_HeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_HeaderLayout.createSequentialGroup()
+                .addGap(291, 291, 291)
+                .addComponent(lbl_BusinessPartner)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        pnl_HeaderLayout.setVerticalGroup(
+            pnl_HeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_HeaderLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(lbl_BusinessPartner, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(25, 25, 25))
+        );
+
+        tbl_BP.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "ID", "Name", "Group", "Type", "Item Class", "Base UOM", "Sales UOM", "Purchase UOM"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Integer.class, java.lang.String.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane1.setViewportView(tbl_BP);
+        if (tbl_BP.getColumnModel().getColumnCount() > 0) {
+            tbl_BP.getColumnModel().getColumn(0).setMaxWidth(50);
+        }
+
+        btn_prev.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_prevActionPerformed(evt);
+            }
+        });
+
+        btn_next.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_nextActionPerformed(evt);
+            }
+        });
+
+        btn_last.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_lastActionPerformed(evt);
+            }
+        });
+
+        btn_first.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_firstActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout pnl_navigationButtonsLayout = new javax.swing.GroupLayout(pnl_navigationButtons);
+        pnl_navigationButtons.setLayout(pnl_navigationButtonsLayout);
+        pnl_navigationButtonsLayout.setHorizontalGroup(
+            pnl_navigationButtonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_navigationButtonsLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnl_navigationButtonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btn_prev, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btn_last, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btn_next, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btn_first, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        pnl_navigationButtonsLayout.setVerticalGroup(
+            pnl_navigationButtonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_navigationButtonsLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(btn_first, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btn_prev, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btn_next, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btn_last, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jScrollPane1)
+                        .addContainerGap())
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(pnl_form, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(pnl_actionButtons, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(32, 32, 32)))
+                        .addComponent(pnl_navigationButtons, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 58, Short.MAX_VALUE))
+                    .addComponent(pnl_Header, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(pnl_Header, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(pnl_navigationButtons, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(pnl_form, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(pnl_actionButtons, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btn_SaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_SaveActionPerformed
+
+    }//GEN-LAST:event_btn_SaveActionPerformed
+
+    private void btn_clearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_clearActionPerformed
+
+    }//GEN-LAST:event_btn_clearActionPerformed
+
+    private void btn_delActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_delActionPerformed
+
+    }//GEN-LAST:event_btn_delActionPerformed
+
+    private void btn_updateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_updateActionPerformed
+
+    }//GEN-LAST:event_btn_updateActionPerformed
+
+    private void btn_exitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_exitActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_btn_exitActionPerformed
+
+    private void btn_prevActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_prevActionPerformed
+
+    }//GEN-LAST:event_btn_prevActionPerformed
+
+    private void btn_nextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_nextActionPerformed
+
+    }//GEN-LAST:event_btn_nextActionPerformed
+
+    private void btn_lastActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_lastActionPerformed
+
+    }//GEN-LAST:event_btn_lastActionPerformed
+
+    private void btn_firstActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_firstActionPerformed
+
+    }//GEN-LAST:event_btn_firstActionPerformed
+
+    private void cbox_BPTypeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbox_BPTypeActionPerformed
+
+    }//GEN-LAST:event_cbox_BPTypeActionPerformed
+
+    private void cbox_BPType1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbox_BPType1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cbox_BPType1ActionPerformed
+
+    private void cbox_BPType2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbox_BPType2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cbox_BPType2ActionPerformed
+
+    private void cbox_BPType3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbox_BPType3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cbox_BPType3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +479,37 @@ public class Inventory extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btn_Save;
+    private javax.swing.JButton btn_clear;
+    private javax.swing.JButton btn_del;
+    private javax.swing.JButton btn_exit;
+    private javax.swing.JButton btn_first;
+    private javax.swing.JButton btn_last;
+    private javax.swing.JButton btn_next;
+    private javax.swing.JButton btn_prev;
+    private javax.swing.JButton btn_update;
+    private javax.swing.JComboBox<String> cbox_BPClass;
+    private javax.swing.JComboBox<String> cbox_BPGroup;
+    private javax.swing.JComboBox<String> cbox_BPType;
+    private javax.swing.JComboBox<String> cbox_BPType1;
+    private javax.swing.JComboBox<String> cbox_BPType2;
+    private javax.swing.JComboBox<String> cbox_BPType3;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel lbl_BPClass;
+    private javax.swing.JLabel lbl_BPEmail;
+    private javax.swing.JLabel lbl_BPGroup;
+    private javax.swing.JLabel lbl_BPID;
+    private javax.swing.JLabel lbl_BPName;
+    private javax.swing.JLabel lbl_BPPhone;
+    private javax.swing.JLabel lbl_BPTownship;
+    private javax.swing.JLabel lbl_BPType;
+    private javax.swing.JLabel lbl_BusinessPartner;
+    private javax.swing.JPanel pnl_Header;
+    private javax.swing.JPanel pnl_actionButtons;
+    private javax.swing.JPanel pnl_form;
+    private javax.swing.JPanel pnl_navigationButtons;
+    private javax.swing.JTable tbl_BP;
+    public javax.swing.JTextField txt_BPID;
+    private javax.swing.JTextField txt_BPName;
     // End of variables declaration//GEN-END:variables
 }
