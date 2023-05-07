@@ -1,5 +1,6 @@
-package Branch;
+package Tax;
 
+import CompanyData.*;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -7,7 +8,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
-public class DatabaseConnection {
+public class databaseConnection {
    Connection Conn = null;
    String url = "jdbc:postgresql://localhost/POS";
    String user = "postgres";
@@ -17,15 +18,17 @@ public class DatabaseConnection {
        try {
            Conn = DriverManager.getConnection(url, user, password);
 
+           JOptionPane.showMessageDialog(null, "Connected");
+
        } catch (SQLException ex) {
-           Logger.getLogger(DatabaseConnection.class.getName()).log(Level.SEVERE, null, ex);
+           Logger.getLogger(databaseConnection.class.getName()).log(Level.SEVERE, null, ex);
        }
         return Conn;
    }
 
-//   public static void main(String[] args) {
-//   DatabaseConnection connDatabase = new DatabaseConnection();
-//   connDatabase.databaseConn();
-//   }
+   public static void main(String[] args) {
+   databaseConnection connDatabase = new databaseConnection();
+   connDatabase.databaseConn();
+   }
    
 }
