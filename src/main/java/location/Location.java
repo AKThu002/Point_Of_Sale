@@ -27,16 +27,16 @@ public class Location extends javax.swing.JFrame {
     private void initComponents() {
 
         pnl_form = new javax.swing.JPanel();
-        lbl_BPID = new javax.swing.JLabel();
-        txt_BPID = new javax.swing.JTextField();
-        lbl_BPName = new javax.swing.JLabel();
-        txt_BPName = new javax.swing.JTextField();
-        txt_BPEmail = new javax.swing.JTextField();
-        lbl_BPEmail = new javax.swing.JLabel();
+        lbl_locationID = new javax.swing.JLabel();
+        txt_locationID = new javax.swing.JTextField();
+        lbl_locationName = new javax.swing.JLabel();
+        txt_locationName = new javax.swing.JTextField();
+        txt_warehouseID = new javax.swing.JTextField();
+        lbl_warehouseID = new javax.swing.JLabel();
         pnl_Header = new javax.swing.JPanel();
         lbl_BusinessPartner = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        tbl_BP = new javax.swing.JTable();
+        tbl_location = new javax.swing.JTable();
         pnl_navigationButtons = new javax.swing.JPanel();
         btn_prev = new javax.swing.JButton();
         btn_next = new javax.swing.JButton();
@@ -51,18 +51,18 @@ public class Location extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        lbl_BPID.setText("Location ID");
+        lbl_locationID.setText("ID");
 
-        txt_BPID.setEditable(false);
-        txt_BPID.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        txt_locationID.setEditable(false);
+        txt_locationID.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        lbl_BPName.setText("Location Name");
+        lbl_locationName.setText("Name");
 
-        txt_BPName.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        txt_locationName.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        txt_BPEmail.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        txt_warehouseID.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        lbl_BPEmail.setText("Warehouse ID");
+        lbl_warehouseID.setText("Warehouse ID");
 
         javax.swing.GroupLayout pnl_formLayout = new javax.swing.GroupLayout(pnl_form);
         pnl_form.setLayout(pnl_formLayout);
@@ -71,14 +71,14 @@ public class Location extends javax.swing.JFrame {
             .addGroup(pnl_formLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(pnl_formLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(lbl_BPEmail)
-                    .addComponent(lbl_BPName)
-                    .addComponent(lbl_BPID))
+                    .addComponent(lbl_warehouseID)
+                    .addComponent(lbl_locationName)
+                    .addComponent(lbl_locationID))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(pnl_formLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(txt_BPID)
-                    .addComponent(txt_BPName, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txt_BPEmail, javax.swing.GroupLayout.Alignment.LEADING))
+                    .addComponent(txt_locationID)
+                    .addComponent(txt_locationName, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txt_warehouseID, javax.swing.GroupLayout.Alignment.LEADING))
                 .addContainerGap())
         );
         pnl_formLayout.setVerticalGroup(
@@ -86,30 +86,30 @@ public class Location extends javax.swing.JFrame {
             .addGroup(pnl_formLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(pnl_formLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbl_BPID)
-                    .addComponent(txt_BPID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lbl_locationID)
+                    .addComponent(txt_locationID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(pnl_formLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txt_BPName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lbl_BPName))
+                    .addComponent(txt_locationName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_locationName))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(pnl_formLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txt_BPEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lbl_BPEmail))
+                    .addComponent(txt_warehouseID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_warehouseID))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         lbl_BusinessPartner.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        lbl_BusinessPartner.setText("Business Partner");
+        lbl_BusinessPartner.setText("Location");
 
         javax.swing.GroupLayout pnl_HeaderLayout = new javax.swing.GroupLayout(pnl_Header);
         pnl_Header.setLayout(pnl_HeaderLayout);
         pnl_HeaderLayout.setHorizontalGroup(
             pnl_HeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_HeaderLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(223, Short.MAX_VALUE)
                 .addComponent(lbl_BusinessPartner)
-                .addGap(132, 132, 132))
+                .addGap(223, 223, 223))
         );
         pnl_HeaderLayout.setVerticalGroup(
             pnl_HeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -119,19 +119,19 @@ public class Location extends javax.swing.JFrame {
                 .addGap(25, 25, 25))
         );
 
-        tbl_BP.setModel(new javax.swing.table.DefaultTableModel(
+        tbl_location.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
             new String [] {
-                "ID", "Name", "Class", "Group", "Type"
+                "ID", "Name", "Warehouse ID"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.String.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
+                java.lang.Integer.class, java.lang.String.class, java.lang.Object.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, true, false
+                false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -142,7 +142,10 @@ public class Location extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(tbl_BP);
+        jScrollPane1.setViewportView(tbl_location);
+        if (tbl_location.getColumnModel().getColumnCount() > 0) {
+            tbl_location.getColumnModel().getColumn(0).setMaxWidth(100);
+        }
 
         btn_prev.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -246,7 +249,7 @@ public class Location extends javax.swing.JFrame {
                 .addComponent(btn_del)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btn_exit)
-                .addContainerGap(12, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         pnl_actionButtonsLayout.setVerticalGroup(
             pnl_actionButtonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -272,15 +275,21 @@ public class Location extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(pnl_Header, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(pnl_Header, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addContainerGap())
                     .addComponent(jScrollPane1)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(pnl_actionButtons, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(pnl_form, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(25, 25, 25)
+                                .addComponent(pnl_form, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(pnl_actionButtons, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(pnl_navigationButtons, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 6, Short.MAX_VALUE))))
+                        .addGap(25, 25, 25))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -294,9 +303,9 @@ public class Location extends javax.swing.JFrame {
                         .addComponent(pnl_form, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(pnl_actionButtons, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(90, 90, 90))
+                .addContainerGap())
         );
 
         pack();
@@ -384,17 +393,17 @@ public class Location extends javax.swing.JFrame {
     private javax.swing.JButton btn_prev;
     private javax.swing.JButton btn_update;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JLabel lbl_BPEmail;
-    private javax.swing.JLabel lbl_BPID;
-    private javax.swing.JLabel lbl_BPName;
     private javax.swing.JLabel lbl_BusinessPartner;
+    private javax.swing.JLabel lbl_locationID;
+    private javax.swing.JLabel lbl_locationName;
+    private javax.swing.JLabel lbl_warehouseID;
     private javax.swing.JPanel pnl_Header;
     private javax.swing.JPanel pnl_actionButtons;
     private javax.swing.JPanel pnl_form;
     private javax.swing.JPanel pnl_navigationButtons;
-    private javax.swing.JTable tbl_BP;
-    private javax.swing.JTextField txt_BPEmail;
-    public javax.swing.JTextField txt_BPID;
-    private javax.swing.JTextField txt_BPName;
+    private javax.swing.JTable tbl_location;
+    public javax.swing.JTextField txt_locationID;
+    private javax.swing.JTextField txt_locationName;
+    private javax.swing.JTextField txt_warehouseID;
     // End of variables declaration//GEN-END:variables
 }

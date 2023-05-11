@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+<Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
   </Properties>
@@ -26,16 +26,25 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="pnl_Header" max="32767" attributes="0"/>
-                  <Component id="jScrollPane1" alignment="0" max="32767" attributes="0"/>
                   <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="pnl_actionButtons" max="32767" attributes="0"/>
-                          <Component id="pnl_form" max="32767" attributes="0"/>
+                      <Component id="pnl_Header" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                  </Group>
+                  <Component id="jScrollPane1" alignment="0" max="32767" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+                              <Component id="pnl_form" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              <Component id="pnl_actionButtons" min="-2" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="pnl_navigationButtons" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="6" max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                   </Group>
               </Group>
           </Group>
@@ -55,9 +64,9 @@
                       <Component id="pnl_actionButtons" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
               <Component id="jScrollPane1" min="-2" pref="221" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="90" max="-2" attributes="0"/>
+              <EmptySpace min="-2" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -71,15 +80,15 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
-                      <Component id="lbl_BPEmail" alignment="1" min="-2" max="-2" attributes="0"/>
-                      <Component id="lbl_BPName" alignment="1" min="-2" max="-2" attributes="0"/>
-                      <Component id="lbl_BPID" alignment="1" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_warehouseID" alignment="1" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_locationName" alignment="1" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_locationID" alignment="1" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
-                      <Component id="txt_BPID" alignment="1" max="32767" attributes="0"/>
-                      <Component id="txt_BPName" alignment="0" max="32767" attributes="0"/>
-                      <Component id="txt_BPEmail" alignment="0" max="32767" attributes="0"/>
+                      <Component id="txt_locationID" alignment="1" max="32767" attributes="0"/>
+                      <Component id="txt_locationName" alignment="0" max="32767" attributes="0"/>
+                      <Component id="txt_warehouseID" alignment="0" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" max="-2" attributes="0"/>
               </Group>
@@ -90,18 +99,18 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="lbl_BPID" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="txt_BPID" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_locationID" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txt_locationID" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="txt_BPName" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="lbl_BPName" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txt_locationName" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_locationName" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="txt_BPEmail" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="lbl_BPEmail" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txt_warehouseID" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_warehouseID" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
@@ -109,12 +118,12 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="lbl_BPID">
+        <Component class="javax.swing.JLabel" name="lbl_locationID">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Location ID"/>
+            <Property name="text" type="java.lang.String" value="ID"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="txt_BPID">
+        <Component class="javax.swing.JTextField" name="txt_locationID">
           <Properties>
             <Property name="editable" type="boolean" value="false"/>
             <Property name="horizontalAlignment" type="int" value="4"/>
@@ -124,22 +133,22 @@
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
           </AuxValues>
         </Component>
-        <Component class="javax.swing.JLabel" name="lbl_BPName">
+        <Component class="javax.swing.JLabel" name="lbl_locationName">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Location Name"/>
+            <Property name="text" type="java.lang.String" value="Name"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="txt_BPName">
-          <Properties>
-            <Property name="horizontalAlignment" type="int" value="4"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="txt_BPEmail">
+        <Component class="javax.swing.JTextField" name="txt_locationName">
           <Properties>
             <Property name="horizontalAlignment" type="int" value="4"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="lbl_BPEmail">
+        <Component class="javax.swing.JTextField" name="txt_warehouseID">
+          <Properties>
+            <Property name="horizontalAlignment" type="int" value="4"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lbl_warehouseID">
           <Properties>
             <Property name="text" type="java.lang.String" value="Warehouse ID"/>
           </Properties>
@@ -152,9 +161,9 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace pref="223" max="32767" attributes="0"/>
                   <Component id="lbl_BusinessPartner" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="132" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="223" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -174,7 +183,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="24" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Business Partner"/>
+            <Property name="text" type="java.lang.String" value="Location"/>
           </Properties>
         </Component>
       </SubComponents>
@@ -186,16 +195,33 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
-        <Component class="javax.swing.JTable" name="tbl_BP">
+        <Component class="javax.swing.JTable" name="tbl_location">
           <Properties>
             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-              <Table columnCount="5" rowCount="0">
+              <Table columnCount="3" rowCount="0">
                 <Column editable="false" title="ID" type="java.lang.Integer"/>
                 <Column editable="false" title="Name" type="java.lang.String"/>
-                <Column editable="false" title="Class" type="java.lang.Object"/>
-                <Column editable="true" title="Group" type="java.lang.Object"/>
-                <Column editable="false" title="Type" type="java.lang.Object"/>
+                <Column editable="false" title="Warehouse ID" type="java.lang.Object"/>
               </Table>
+            </Property>
+            <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
+              <TableColumnModel selectionModel="0">
+                <Column maxWidth="100" minWidth="-1" prefWidth="-1" resizable="true">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+              </TableColumnModel>
             </Property>
             <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
               <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
@@ -276,7 +302,7 @@
                   <Component id="btn_del" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="btn_exit" max="-2" attributes="0"/>
-                  <EmptySpace pref="12" max="32767" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>

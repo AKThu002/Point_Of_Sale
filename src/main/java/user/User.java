@@ -33,28 +33,28 @@ public class User extends javax.swing.JFrame {
         btn_update = new javax.swing.JButton();
         btn_exit = new javax.swing.JButton();
         pnl_form = new javax.swing.JPanel();
-        lbl_BPID = new javax.swing.JLabel();
-        txt_BPID = new javax.swing.JTextField();
-        lbl_BPName = new javax.swing.JLabel();
-        txt_BPName = new javax.swing.JTextField();
-        txt_BPEmail = new javax.swing.JTextField();
-        lbl_BPEmail = new javax.swing.JLabel();
-        txt_BPJoinDate = new javax.swing.JTextField();
-        lbl_BPPhone = new javax.swing.JLabel();
-        txt_BPPhone = new javax.swing.JTextField();
-        txt_BPTownship = new javax.swing.JTextField();
-        lbl_BPTownship = new javax.swing.JLabel();
-        lbl_BPJoinDate = new javax.swing.JLabel();
-        txt_BPDistrict = new javax.swing.JTextField();
-        lbl_BPDistrict1 = new javax.swing.JLabel();
-        txt_BPName1 = new javax.swing.JTextField();
-        lbl_BPDistrict = new javax.swing.JLabel();
-        txt_BPJoinDate1 = new javax.swing.JTextField();
-        lbl_BPJoinDate1 = new javax.swing.JLabel();
+        lbl_userID = new javax.swing.JLabel();
+        txt_userID = new javax.swing.JTextField();
+        lbl_userFirstName = new javax.swing.JLabel();
+        txt_userFirstName = new javax.swing.JTextField();
+        txt_userEmail = new javax.swing.JTextField();
+        lbl_userEmail = new javax.swing.JLabel();
+        txt_userRemark = new javax.swing.JTextField();
+        lbl_userPassword = new javax.swing.JLabel();
+        txt_userPassword = new javax.swing.JTextField();
+        txt_userType = new javax.swing.JTextField();
+        lbl_userType = new javax.swing.JLabel();
+        lbl_userRemark = new javax.swing.JLabel();
+        txt_userRole = new javax.swing.JTextField();
+        lbl_userLastName = new javax.swing.JLabel();
+        txt_userLastName = new javax.swing.JTextField();
+        lbl_userRole = new javax.swing.JLabel();
+        txt_branchID = new javax.swing.JTextField();
+        lbl_branchID = new javax.swing.JLabel();
         pnl_Header = new javax.swing.JPanel();
-        lbl_BusinessPartner = new javax.swing.JLabel();
+        lbl_user = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        tbl_BP = new javax.swing.JTable();
+        tbl_branch = new javax.swing.JTable();
         pnl_navigationButtons = new javax.swing.JPanel();
         btn_prev = new javax.swing.JButton();
         btn_next = new javax.swing.JButton();
@@ -133,47 +133,47 @@ public class User extends javax.swing.JFrame {
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
-        lbl_BPID.setText("ID");
+        lbl_userID.setText("ID");
 
-        txt_BPID.setEditable(false);
-        txt_BPID.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        txt_userID.setEditable(false);
+        txt_userID.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        lbl_BPName.setText("First Name");
+        lbl_userFirstName.setText("First Name");
 
-        txt_BPName.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        txt_userFirstName.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        txt_BPEmail.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        txt_BPEmail.addActionListener(new java.awt.event.ActionListener() {
+        txt_userEmail.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        txt_userEmail.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_BPEmailActionPerformed(evt);
+                txt_userEmailActionPerformed(evt);
             }
         });
 
-        lbl_BPEmail.setText("Email");
+        lbl_userEmail.setText("Email");
 
-        txt_BPJoinDate.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        txt_userRemark.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        lbl_BPPhone.setText("Password");
+        lbl_userPassword.setText("Password");
 
-        txt_BPPhone.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        txt_userPassword.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        txt_BPTownship.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        txt_userType.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        lbl_BPTownship.setText("Type");
+        lbl_userType.setText("Type");
 
-        lbl_BPJoinDate.setText("Remark");
+        lbl_userRemark.setText("Remark");
 
-        txt_BPDistrict.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        txt_userRole.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        lbl_BPDistrict1.setText("Last Name");
+        lbl_userLastName.setText("Last Name");
 
-        txt_BPName1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        txt_userLastName.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        lbl_BPDistrict.setText("Role");
+        lbl_userRole.setText("Role");
 
-        txt_BPJoinDate1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        txt_branchID.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        lbl_BPJoinDate1.setText("Branch ID");
+        lbl_branchID.setText("Branch ID");
 
         javax.swing.GroupLayout pnl_formLayout = new javax.swing.GroupLayout(pnl_form);
         pnl_form.setLayout(pnl_formLayout);
@@ -183,35 +183,34 @@ public class User extends javax.swing.JFrame {
                 .addGap(25, 25, 25)
                 .addGroup(pnl_formLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(pnl_formLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(lbl_BPEmail)
-                        .addComponent(lbl_BPPhone)
-                        .addComponent(lbl_BPTownship)
-                        .addComponent(lbl_BPName)
-                        .addComponent(lbl_BPID)
-                        .addComponent(lbl_BPJoinDate))
+                        .addComponent(lbl_userEmail)
+                        .addComponent(lbl_userPassword)
+                        .addComponent(lbl_userType)
+                        .addComponent(lbl_userFirstName)
+                        .addComponent(lbl_userID)
+                        .addComponent(lbl_userRemark))
                     .addGroup(pnl_formLayout.createSequentialGroup()
                         .addGap(11, 11, 11)
-                        .addComponent(lbl_BPJoinDate1)))
+                        .addComponent(lbl_branchID)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(pnl_formLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(txt_BPJoinDate1)
-                    .addGroup(pnl_formLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_formLayout.createSequentialGroup()
-                            .addComponent(txt_BPTownship, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(lbl_BPDistrict)
-                            .addGap(8, 8, 8)
-                            .addComponent(txt_BPDistrict, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(txt_BPPhone)
-                        .addComponent(txt_BPEmail)
-                        .addGroup(pnl_formLayout.createSequentialGroup()
-                            .addComponent(txt_BPName, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(lbl_BPDistrict1)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(txt_BPName1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(txt_BPJoinDate)
-                        .addComponent(txt_BPID)))
+                    .addComponent(txt_branchID)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_formLayout.createSequentialGroup()
+                        .addComponent(txt_userType, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(lbl_userRole)
+                        .addGap(8, 8, 8)
+                        .addComponent(txt_userRole, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txt_userPassword)
+                    .addComponent(txt_userEmail)
+                    .addGroup(pnl_formLayout.createSequentialGroup()
+                        .addComponent(txt_userFirstName, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(lbl_userLastName)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txt_userLastName, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txt_userRemark)
+                    .addComponent(txt_userID))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         pnl_formLayout.setVerticalGroup(
@@ -219,41 +218,41 @@ public class User extends javax.swing.JFrame {
             .addGroup(pnl_formLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(pnl_formLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbl_BPID)
-                    .addComponent(txt_BPID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lbl_userID)
+                    .addComponent(txt_userID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(pnl_formLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txt_BPName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lbl_BPName)
-                    .addComponent(lbl_BPDistrict1)
-                    .addComponent(txt_BPName1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txt_userFirstName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_userFirstName)
+                    .addComponent(lbl_userLastName)
+                    .addComponent(txt_userLastName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(pnl_formLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txt_BPEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lbl_BPEmail))
+                    .addComponent(txt_userEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_userEmail))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(pnl_formLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txt_BPPhone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lbl_BPPhone))
+                    .addComponent(txt_userPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_userPassword))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(pnl_formLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txt_BPTownship, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lbl_BPTownship)
-                    .addComponent(txt_BPDistrict, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lbl_BPDistrict))
+                    .addComponent(txt_userType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_userType)
+                    .addComponent(txt_userRole, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_userRole))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(pnl_formLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txt_BPJoinDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lbl_BPJoinDate))
+                    .addComponent(txt_userRemark, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_userRemark))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(pnl_formLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txt_BPJoinDate1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lbl_BPJoinDate1))
+                    .addComponent(txt_branchID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_branchID))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        lbl_BusinessPartner.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        lbl_BusinessPartner.setText("User");
+        lbl_user.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        lbl_user.setText("User");
 
         javax.swing.GroupLayout pnl_HeaderLayout = new javax.swing.GroupLayout(pnl_Header);
         pnl_Header.setLayout(pnl_HeaderLayout);
@@ -261,18 +260,18 @@ public class User extends javax.swing.JFrame {
             pnl_HeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnl_HeaderLayout.createSequentialGroup()
                 .addGap(258, 258, 258)
-                .addComponent(lbl_BusinessPartner)
+                .addComponent(lbl_user)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         pnl_HeaderLayout.setVerticalGroup(
             pnl_HeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_HeaderLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(lbl_BusinessPartner, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lbl_user, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(25, 25, 25))
         );
 
-        tbl_BP.setModel(new javax.swing.table.DefaultTableModel(
+        tbl_branch.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -295,13 +294,13 @@ public class User extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(tbl_BP);
-        if (tbl_BP.getColumnModel().getColumnCount() > 0) {
-            tbl_BP.getColumnModel().getColumn(0).setMaxWidth(50);
-            tbl_BP.getColumnModel().getColumn(1).setMaxWidth(500);
-            tbl_BP.getColumnModel().getColumn(2).setMaxWidth(500);
-            tbl_BP.getColumnModel().getColumn(3).setMaxWidth(250);
-            tbl_BP.getColumnModel().getColumn(4).setMaxWidth(250);
+        jScrollPane1.setViewportView(tbl_branch);
+        if (tbl_branch.getColumnModel().getColumnCount() > 0) {
+            tbl_branch.getColumnModel().getColumn(0).setMaxWidth(50);
+            tbl_branch.getColumnModel().getColumn(1).setMaxWidth(500);
+            tbl_branch.getColumnModel().getColumn(2).setMaxWidth(500);
+            tbl_branch.getColumnModel().getColumn(3).setMaxWidth(250);
+            tbl_branch.getColumnModel().getColumn(4).setMaxWidth(250);
         }
 
         btn_prev.addActionListener(new java.awt.event.ActionListener() {
@@ -429,9 +428,9 @@ public class User extends javax.swing.JFrame {
 
     }//GEN-LAST:event_btn_firstActionPerformed
 
-    private void txt_BPEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_BPEmailActionPerformed
+    private void txt_userEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_userEmailActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txt_BPEmailActionPerformed
+    }//GEN-LAST:event_txt_userEmailActionPerformed
 
     /**
      * @param args the command line arguments
@@ -479,29 +478,29 @@ public class User extends javax.swing.JFrame {
     private javax.swing.JButton btn_prev;
     private javax.swing.JButton btn_update;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JLabel lbl_BPDistrict;
-    private javax.swing.JLabel lbl_BPDistrict1;
-    private javax.swing.JLabel lbl_BPEmail;
-    private javax.swing.JLabel lbl_BPID;
-    private javax.swing.JLabel lbl_BPJoinDate;
-    private javax.swing.JLabel lbl_BPJoinDate1;
-    private javax.swing.JLabel lbl_BPName;
-    private javax.swing.JLabel lbl_BPPhone;
-    private javax.swing.JLabel lbl_BPTownship;
-    private javax.swing.JLabel lbl_BusinessPartner;
+    private javax.swing.JLabel lbl_branchID;
+    private javax.swing.JLabel lbl_user;
+    private javax.swing.JLabel lbl_userEmail;
+    private javax.swing.JLabel lbl_userFirstName;
+    private javax.swing.JLabel lbl_userID;
+    private javax.swing.JLabel lbl_userLastName;
+    private javax.swing.JLabel lbl_userPassword;
+    private javax.swing.JLabel lbl_userRemark;
+    private javax.swing.JLabel lbl_userRole;
+    private javax.swing.JLabel lbl_userType;
     private javax.swing.JPanel pnl_Header;
     private javax.swing.JPanel pnl_actionButtons;
     private javax.swing.JPanel pnl_form;
     private javax.swing.JPanel pnl_navigationButtons;
-    private javax.swing.JTable tbl_BP;
-    private javax.swing.JTextField txt_BPDistrict;
-    private javax.swing.JTextField txt_BPEmail;
-    public javax.swing.JTextField txt_BPID;
-    private javax.swing.JTextField txt_BPJoinDate;
-    private javax.swing.JTextField txt_BPJoinDate1;
-    private javax.swing.JTextField txt_BPName;
-    private javax.swing.JTextField txt_BPName1;
-    private javax.swing.JTextField txt_BPPhone;
-    private javax.swing.JTextField txt_BPTownship;
+    private javax.swing.JTable tbl_branch;
+    private javax.swing.JTextField txt_branchID;
+    private javax.swing.JTextField txt_userEmail;
+    private javax.swing.JTextField txt_userFirstName;
+    public javax.swing.JTextField txt_userID;
+    private javax.swing.JTextField txt_userLastName;
+    private javax.swing.JTextField txt_userPassword;
+    private javax.swing.JTextField txt_userRemark;
+    private javax.swing.JTextField txt_userRole;
+    private javax.swing.JTextField txt_userType;
     // End of variables declaration//GEN-END:variables
 }

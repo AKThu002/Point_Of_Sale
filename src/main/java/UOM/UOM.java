@@ -26,36 +26,142 @@ public class UOM extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        lbl_header = new javax.swing.JLabel();
-        jPanel1 = new javax.swing.JPanel();
-        btn_Save = new javax.swing.JButton();
-        btn_clear = new javax.swing.JButton();
-        btn_update = new javax.swing.JButton();
-        btn_exit = new javax.swing.JButton();
-        btn_del = new javax.swing.JButton();
+        lbl_UOM = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        tbl_branch = new javax.swing.JTable();
+        tbl_UOM = new javax.swing.JTable();
         jPanel2 = new javax.swing.JPanel();
         btn_prev = new javax.swing.JButton();
         btn_next = new javax.swing.JButton();
         btn_last = new javax.swing.JButton();
         btn_first = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
-        lbl_branchID = new javax.swing.JLabel();
-        lbl_branchName = new javax.swing.JLabel();
-        txt_branchID = new javax.swing.JTextField();
-        txt_branchName = new javax.swing.JTextField();
-        txt_branchName1 = new javax.swing.JTextField();
-        lbl_branchName1 = new javax.swing.JLabel();
-        txt_branchName2 = new javax.swing.JTextField();
-        lbl_branchName2 = new javax.swing.JLabel();
-        txt_branchName3 = new javax.swing.JTextField();
-        lbl_branchName3 = new javax.swing.JLabel();
+        lbl_ID = new javax.swing.JLabel();
+        lbl_baseUOM = new javax.swing.JLabel();
+        txt_ID = new javax.swing.JTextField();
+        txt_baseUOM = new javax.swing.JTextField();
+        txt_altUOM = new javax.swing.JTextField();
+        lbl_altUOM = new javax.swing.JLabel();
+        txt_numeUOM = new javax.swing.JTextField();
+        lbl_numeUOM = new javax.swing.JLabel();
+        txt_denoUOM = new javax.swing.JTextField();
+        lbl_denoUOM = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        btn_Save = new javax.swing.JButton();
+        btn_clear = new javax.swing.JButton();
+        btn_update = new javax.swing.JButton();
+        btn_exit = new javax.swing.JButton();
+        btn_del = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        lbl_header.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        lbl_header.setText("Units Of Measure");
+        lbl_UOM.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        lbl_UOM.setText("Units Of Measure");
+
+        tbl_UOM.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "ID", "Base UOM", "Alt UOM", "Numerator UOM", "Denominator UOM"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Integer.class, java.lang.String.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane1.setViewportView(tbl_UOM);
+        if (tbl_UOM.getColumnModel().getColumnCount() > 0) {
+            tbl_UOM.getColumnModel().getColumn(0).setMaxWidth(50);
+            tbl_UOM.getColumnModel().getColumn(1).setMaxWidth(100);
+            tbl_UOM.getColumnModel().getColumn(2).setMaxWidth(100);
+        }
+
+        btn_prev.setText("<");
+        btn_prev.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_prevActionPerformed(evt);
+            }
+        });
+
+        btn_next.setText(">");
+        btn_next.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_nextActionPerformed(evt);
+            }
+        });
+
+        btn_last.setText("l");
+        btn_last.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_lastActionPerformed(evt);
+            }
+        });
+
+        btn_first.setText("f");
+        btn_first.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_firstActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btn_prev, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btn_last, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btn_next, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btn_first, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(btn_first, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btn_prev, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btn_next, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btn_last, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        lbl_ID.setText("ID");
+
+        lbl_baseUOM.setText("Base UOM");
+
+        txt_ID.setEditable(false);
+        txt_ID.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+
+        txt_baseUOM.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+
+        txt_altUOM.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+
+        lbl_altUOM.setText("Alternative UOM");
+
+        txt_numeUOM.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+
+        lbl_numeUOM.setText("Numerator UOM");
+
+        txt_denoUOM.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+
+        lbl_denoUOM.setText("Denominator UOM");
 
         btn_Save.setText("Save");
         btn_Save.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -127,112 +233,6 @@ public class UOM extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        tbl_branch.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-                "UOM ID", "Base UOM", "Alt UOM", "Numerator UOM", "Denominator UOM"
-            }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.String.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
-            };
-            boolean[] canEdit = new boolean [] {
-                false, false, false, false, false
-            };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        jScrollPane1.setViewportView(tbl_branch);
-        if (tbl_branch.getColumnModel().getColumnCount() > 0) {
-            tbl_branch.getColumnModel().getColumn(0).setMaxWidth(50);
-            tbl_branch.getColumnModel().getColumn(1).setMaxWidth(100);
-            tbl_branch.getColumnModel().getColumn(2).setMaxWidth(100);
-        }
-
-        btn_prev.setText("<");
-        btn_prev.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_prevActionPerformed(evt);
-            }
-        });
-
-        btn_next.setText(">");
-        btn_next.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_nextActionPerformed(evt);
-            }
-        });
-
-        btn_last.setText("l");
-        btn_last.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_lastActionPerformed(evt);
-            }
-        });
-
-        btn_first.setText("f");
-        btn_first.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_firstActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btn_prev, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btn_last, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btn_next, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btn_first, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(btn_first, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btn_prev, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btn_next, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btn_last, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        lbl_branchID.setText("UOM ID");
-
-        lbl_branchName.setText("Base UOM");
-
-        txt_branchID.setEditable(false);
-        txt_branchID.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        txt_branchName.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        txt_branchName1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        lbl_branchName1.setText("Alternative UOM");
-
-        txt_branchName2.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        lbl_branchName2.setText("Numerator UOM");
-
-        txt_branchName3.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-
-        lbl_branchName3.setText("Denominator UOM");
-
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
@@ -243,48 +243,52 @@ public class UOM extends javax.swing.JFrame {
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(46, 46, 46)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(lbl_branchID)
-                            .addComponent(lbl_branchName))
-                        .addGap(18, 18, 18)
+                            .addComponent(lbl_ID)
+                            .addComponent(lbl_baseUOM))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txt_branchName)
-                            .addComponent(txt_branchID)))
+                            .addComponent(txt_baseUOM)
+                            .addComponent(txt_ID)))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lbl_branchName3)
-                            .addComponent(lbl_branchName1, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(lbl_branchName2, javax.swing.GroupLayout.Alignment.TRAILING))
-                        .addGap(18, 18, 18)
+                            .addComponent(lbl_denoUOM)
+                            .addComponent(lbl_altUOM, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(lbl_numeUOM, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txt_branchName1)
-                            .addComponent(txt_branchName2)
-                            .addComponent(txt_branchName3))))
+                            .addComponent(txt_numeUOM)
+                            .addComponent(txt_denoUOM)
+                            .addComponent(txt_altUOM, javax.swing.GroupLayout.Alignment.TRAILING))))
                 .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addGap(0, 51, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbl_branchID)
-                    .addComponent(txt_branchID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                    .addComponent(lbl_ID)
+                    .addComponent(txt_ID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txt_branchName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lbl_branchName))
-                .addGap(18, 18, 18)
+                    .addComponent(txt_baseUOM, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_baseUOM))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txt_branchName1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lbl_branchName1))
-                .addGap(18, 18, 18)
+                    .addComponent(txt_altUOM, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_altUOM))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txt_branchName2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lbl_branchName2))
-                .addGap(18, 18, 18)
+                    .addComponent(txt_numeUOM, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_numeUOM))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lbl_branchName3)
-                    .addComponent(txt_branchName3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(11, Short.MAX_VALUE))
+                    .addComponent(lbl_denoUOM)
+                    .addComponent(txt_denoUOM, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -294,33 +298,34 @@ public class UOM extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane1)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(lbl_header)
-                                .addGap(89, 89, 89))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
-                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap())
+                                .addGap(0, 25, Short.MAX_VALUE)
+                                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(25, 25, 25)))
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(lbl_UOM)
+                        .addGap(168, 168, 168))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(lbl_header)
-                        .addGap(18, 18, 18)
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addGap(18, 18, 18)
+                        .addComponent(lbl_UOM)
+                        .addGap(26, 26, 26)
+                        .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(0, 58, Short.MAX_VALUE)
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -414,17 +419,17 @@ public class UOM extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JLabel lbl_branchID;
-    private javax.swing.JLabel lbl_branchName;
-    private javax.swing.JLabel lbl_branchName1;
-    private javax.swing.JLabel lbl_branchName2;
-    private javax.swing.JLabel lbl_branchName3;
-    private javax.swing.JLabel lbl_header;
-    private javax.swing.JTable tbl_branch;
-    private javax.swing.JTextField txt_branchID;
-    private javax.swing.JTextField txt_branchName;
-    private javax.swing.JTextField txt_branchName1;
-    private javax.swing.JTextField txt_branchName2;
-    private javax.swing.JTextField txt_branchName3;
+    private javax.swing.JLabel lbl_ID;
+    private javax.swing.JLabel lbl_UOM;
+    private javax.swing.JLabel lbl_altUOM;
+    private javax.swing.JLabel lbl_baseUOM;
+    private javax.swing.JLabel lbl_denoUOM;
+    private javax.swing.JLabel lbl_numeUOM;
+    private javax.swing.JTable tbl_UOM;
+    private javax.swing.JTextField txt_ID;
+    private javax.swing.JTextField txt_altUOM;
+    private javax.swing.JTextField txt_baseUOM;
+    private javax.swing.JTextField txt_denoUOM;
+    private javax.swing.JTextField txt_numeUOM;
     // End of variables declaration//GEN-END:variables
 }

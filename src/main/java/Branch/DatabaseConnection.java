@@ -9,7 +9,7 @@ import javax.swing.JOptionPane;
 
 public class DatabaseConnection {
    Connection Conn = null;
-   String url = "jdbc:postgresql://localhost/POS";
+   String url = "jdbc:postgresql://localhost/POS_DB";
    String user = "postgres";
    String password = "postgre";
    public Connection databaseConn() {

@@ -4,17 +4,30 @@
  */
 package Tax;
 
+import Branch.DatabaseConnection;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author AKThu002
  */
 public class tax extends javax.swing.JFrame {
 
+    databaseConnection databaseConnection = new databaseConnection();
     /**
      * Creates new form tax
      */
     public tax() {
         initComponents();
+        dbconnection = databaseConnection.databaseConn();
+        JOptionPane.showMessageDialog(null, "Connected");
+        getallData();
     }
 
     /**
@@ -39,14 +52,16 @@ public class tax extends javax.swing.JFrame {
         btn_last = new javax.swing.JButton();
         btn_first = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
-        lbl_branchID = new javax.swing.JLabel();
-        lbl_branchName = new javax.swing.JLabel();
-        txt_branchID = new javax.swing.JTextField();
-        txt_branchName = new javax.swing.JTextField();
-        jTextField1 = new javax.swing.JTextField();
-        lbl_branchName1 = new javax.swing.JLabel();
+        lbl_taxID = new javax.swing.JLabel();
+        lbl_taxPercentage = new javax.swing.JLabel();
+        txt_txtID = new javax.swing.JTextField();
+        lbl_taxDescription = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        txtA_taxDescription = new javax.swing.JTextArea();
+        lbl_percentIcon = new javax.swing.JLabel();
+        spin_taxPercentage = new javax.swing.JSpinner();
         jScrollPane1 = new javax.swing.JScrollPane();
-        tbl_branch = new javax.swing.JTable();
+        tbl_tax = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -178,22 +193,22 @@ public class tax extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        lbl_branchID.setText("TAX ID");
+        lbl_taxID.setText("ID");
 
-        lbl_branchName.setText("Percentage");
+        lbl_taxPercentage.setText("Percentage");
 
-        txt_branchID.setEditable(false);
-        txt_branchID.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        txt_txtID.setEditable(false);
+        txt_txtID.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        txt_branchName.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        lbl_taxDescription.setText("Description");
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
-            }
-        });
+        txtA_taxDescription.setColumns(20);
+        txtA_taxDescription.setRows(5);
+        jScrollPane2.setViewportView(txtA_taxDescription);
 
-        lbl_branchName1.setText("Description");
+        lbl_percentIcon.setText("%");
+
+        spin_taxPercentage.setModel(new javax.swing.SpinnerNumberModel(0, 0, 100, 1));
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -202,42 +217,45 @@ public class tax extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(lbl_branchName)
-                    .addComponent(lbl_branchID)
-                    .addComponent(lbl_branchName1))
+                    .addComponent(lbl_taxPercentage)
+                    .addComponent(lbl_taxID)
+                    .addComponent(lbl_taxDescription))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(txt_branchName, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txt_branchID, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 280, Short.MAX_VALUE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(spin_taxPercentage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lbl_percentIcon))
+                    .addComponent(txt_txtID)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 249, Short.MAX_VALUE))
+                .addContainerGap(7, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbl_branchID)
-                    .addComponent(txt_branchID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbl_branchName)
-                    .addComponent(txt_branchName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lbl_taxID)
+                    .addComponent(txt_txtID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(lbl_branchName1)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 58, Short.MAX_VALUE))
-                .addContainerGap())
+                    .addComponent(lbl_taxPercentage)
+                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(lbl_percentIcon)
+                        .addComponent(spin_taxPercentage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lbl_taxDescription)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(31, Short.MAX_VALUE))
         );
 
-        tbl_branch.setModel(new javax.swing.table.DefaultTableModel(
+        tbl_tax.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
             new String [] {
-                "Tax ID", "Percentage"
+                "ID", "Percentage"
             }
         ) {
             Class[] types = new Class [] {
@@ -255,9 +273,9 @@ public class tax extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(tbl_branch);
-        if (tbl_branch.getColumnModel().getColumnCount() > 0) {
-            tbl_branch.getColumnModel().getColumn(0).setMaxWidth(75);
+        jScrollPane1.setViewportView(tbl_tax);
+        if (tbl_tax.getColumnModel().getColumnCount() > 0) {
+            tbl_tax.getColumnModel().getColumn(0).setMaxWidth(75);
         }
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -265,40 +283,42 @@ public class tax extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane1)
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(lbl_header)
+                .addGap(213, 213, 213))
+            .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap(17, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(lbl_header)
-                                .addGap(118, 118, 118))
-                            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addContainerGap(25, Short.MAX_VALUE)
                         .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGap(0, 49, Short.MAX_VALUE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(14, 14, 14))
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 473, Short.MAX_VALUE)
-                .addContainerGap())
+                .addGap(25, 25, 25))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
+                .addComponent(lbl_header)
+                .addGap(26, 26, 26)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(lbl_header)
-                        .addGap(18, 18, 18)
+                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
 
@@ -341,10 +361,151 @@ public class tax extends javax.swing.JFrame {
         
     }//GEN-LAST:event_btn_firstActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    //clear data in the textbox and make it ready for inserting new data
+    private void clear(java.awt.event.ActionEvent evt) {
+        //1.get last item (get all the column)
+        btn_lastActionPerformed(evt);
+        
+        //2.set the next available ID for inserting new data
+        if(txt_txtID.getText().isEmpty()){
+            txt_txtID.setText("1");
+        } else { 
+            txt_txtID.setText(String.valueOf(Integer.valueOf(txt_txtID.getText()) + 1 ));
+        }
+        
+        //3.clear every textfield except ID
+        spin_taxPercentage.setValue("");
+    }
+    
+    //get data from database and show in the table
+    private void getallData(){
+        try  {
 
+           String sqlSelectDataFromDatabase = "Select \"BRCH_ID\", \"BRCH_NAME\" from \"BRCH_TBL\" order by \"BRCH_ID\" asc";
+           preStatement = dbconnection.prepareStatement(sqlSelectDataFromDatabase);
+           result = preStatement.executeQuery();
+           clearTable(); // To Clear Existing Data
+           while(result.next()) {
+               String Branchname = result.getString("BRCH_ID");
+               String BranchID = result.getString("BRCH_NAME");
+           
+
+               DefaultTableModel dftable = (DefaultTableModel) tbl_tax.getModel();
+               Object[] obj = {Branchname,BranchID};
+               dftable.addRow(obj);
+                   }
+             } catch (SQLException e) {
+                 printSQLException(e);
+       }
+    }
+    
+    //clear table
+    private void clearTable(){
+        DefaultTableModel defaultModel = (DefaultTableModel) tbl_tax.getModel();
+        defaultModel.getDataVector().removeAllElements();
+        revalidate();
+    }
+    
+    //execute query
+    private void ExecuteQuery(String queryType) throws SQLException {
+        try{
+            
+            //1.connecting to database
+            databaseConnection connection = new databaseConnection();
+            connection.databaseConn();
+            Statement statement = connection.Conn.createStatement();
+            
+            //2.get the user entered data
+            brID = txt_txtID.getText();
+            brName = spin_taxPercentage.getValue();
+            System.out.println(txt_txtID.getText());
+            
+            //3.checking query type to execute
+            if(queryType=="S"){
+                query = "INSERT INTO \"BRCH_TBL\" ("
+                        + "\"BRCH_ID\","
+                        + "\"BRCH_NAME\""
+                        + ") VALUES ("
+                        + brID + ","
+                        + "'" + brName +"'"
+                        + ");";
+            } else if (queryType=="U"){
+                query = "UPDATE \"BRCH_TBL\" SET "
+                        + "\"BRCH_NAME\"='" + brName + "'"
+                        + "WHERE \"BRCH_ID\"="+ brID + "; ";
+            } else if (queryType=="D"){
+                query = "DELETE FROM \"BRCH_TBL\" WHERE \"BRCH_ID\" = " + brID + ";";
+            }
+            
+            //4.execute query
+            statement.execute(query);
+            connection.Conn.close();
+        } catch(SQLException e){
+            printSQLException(e);
+        }
+    }
+    
+    //get query
+    private void GetQuery(String queryType) throws SQLException {
+        try{
+             
+            //1.connecting to database
+            databaseConnection connection = new databaseConnection();
+            connection.databaseConn();
+            Statement statement = connection.Conn.createStatement();
+            
+            //2.checking query type to execute
+            if(queryType=="first"){
+                query = "SELECT \"BRCH_ID\", \"BRCH_NAME\"FROM \"BRCH_TBL\"ORDER BY \"BRCH_ID\" ASC LIMIT 1;";
+            }else if(queryType=="last"){
+                query = "SELECT \"BRCH_ID\", \"BRCH_NAME\"FROM \"BRCH_TBL\"ORDER BY \"BRCH_ID\" DESC LIMIT 1;";
+            }else if(queryType=="next"){
+                if(txt_txtID.getText().isEmpty()){
+                    query = "SELECT \"BRCH_ID\", \"BRCH_NAME\"FROM \"BRCH_TBL\"ORDER BY \"BRCH_ID\" ASC LIMIT 1;";
+                }else{
+                    nextID = Integer.valueOf(txt_txtID.getText()) + 1;
+                    query = "SELECT \"BRCH_ID\", \"BRCH_NAME\" FROM \"BRCH_TBL\" where \"BRCH_ID\" = "
+                            + nextID +";";
+                }
+            }else if(queryType=="prev"){
+                if(txt_txtID.getText().isEmpty()){
+                    query = "SELECT \"BRCH_ID\", \"BRCH_NAME\"FROM \"BRCH_TBL\"ORDER BY \"BRCH_ID\" DESC LIMIT 1;";
+                }else{
+                    prevID = Integer.valueOf(txt_txtID.getText()) - 1;
+                    query = "SELECT \"BRCH_ID\", \"BRCH_NAME\" FROM \"BRCH_TBL\" where \"BRCH_ID\" = "
+                            + prevID +";";
+                }
+            }
+            
+            //3.execute query & return the result
+            result = statement.executeQuery(query);
+            if(result.next()){
+                txt_txtID.setText(result.getString("BRCH_ID"));
+                txt_taxPercentage.setText(result.getString("BRCH_NAME"));
+            }
+            
+        }catch(SQLException e){
+            printSQLException(e);
+        }
+    }
+    
+     //Query Exception handling
+    private static void printSQLException(SQLException ex) {
+        for (Throwable e : ex) {
+            if (e instanceof SQLException) {
+                e.printStackTrace(System.err);
+                System.err.println("SQLState: " + ((SQLException) e).getSQLState());
+                System.err.println("Error Code: " + ((SQLException) e).getErrorCode());
+                System.err.println("Message: " + e.getMessage());
+                Throwable t = ex.getCause();
+                while (t != null) {
+                    System.out.println("Cause: " + t);
+                    t = t.getCause();
+                }
+            }
+        }
+    }
+    
     /**
      * @param args the command line arguments
      */
@@ -394,13 +555,25 @@ public class tax extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JLabel lbl_branchID;
-    private javax.swing.JLabel lbl_branchName;
-    private javax.swing.JLabel lbl_branchName1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JLabel lbl_header;
-    private javax.swing.JTable tbl_branch;
-    private javax.swing.JTextField txt_branchID;
-    private javax.swing.JTextField txt_branchName;
+    private javax.swing.JLabel lbl_percentIcon;
+    private javax.swing.JLabel lbl_taxDescription;
+    private javax.swing.JLabel lbl_taxID;
+    private javax.swing.JLabel lbl_taxPercentage;
+    private javax.swing.JSpinner spin_taxPercentage;
+    private javax.swing.JTable tbl_tax;
+    private javax.swing.JTextArea txtA_taxDescription;
+    private javax.swing.JTextField txt_txtID;
     // End of variables declaration//GEN-END:variables
+    
+    private String query = null; // to temporarily storing query statement for execution
+    ResultSet result = null; // to store data returned from query execution
+    PreparedStatement preStatement;
+    Connection dbconnection;
+    int nextID;
+    int prevID;
+    String brID;
+    String brName;
+    
 }

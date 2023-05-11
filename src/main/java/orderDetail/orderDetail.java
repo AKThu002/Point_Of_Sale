@@ -38,32 +38,32 @@ public class orderDetail extends javax.swing.JFrame {
         btn_update = new javax.swing.JButton();
         btn_exit = new javax.swing.JButton();
         pnl_form = new javax.swing.JPanel();
-        lbl_BPID = new javax.swing.JLabel();
-        txt_BPID = new javax.swing.JTextField();
-        lbl_BPName = new javax.swing.JLabel();
-        txt_BPName = new javax.swing.JTextField();
-        txt_BPEmail = new javax.swing.JTextField();
-        lbl_BPEmail = new javax.swing.JLabel();
-        lbl_BPPhone = new javax.swing.JLabel();
-        txt_BPPhone = new javax.swing.JTextField();
-        txt_BPCity = new javax.swing.JTextField();
-        lbl_BPCity = new javax.swing.JLabel();
-        txt_BPTownship = new javax.swing.JTextField();
-        lbl_BPTownship = new javax.swing.JLabel();
+        lbl_orderDetailID = new javax.swing.JLabel();
+        txt_orderDetailID = new javax.swing.JTextField();
+        lbl_orderDetailQuantity = new javax.swing.JLabel();
+        txt_orderDetailQuantity = new javax.swing.JTextField();
+        txt_orderDetailType = new javax.swing.JTextField();
+        lbl_orderDetailType = new javax.swing.JLabel();
+        lbl_orderDetailStatus = new javax.swing.JLabel();
+        txt_orderDetailStatus = new javax.swing.JTextField();
+        txt_orderHeaderID = new javax.swing.JTextField();
+        lbl_orderHeaderID = new javax.swing.JLabel();
+        txt_inventoryID = new javax.swing.JTextField();
+        lbl_inventoryID = new javax.swing.JLabel();
         lbl_BPAddress = new javax.swing.JLabel();
-        lbl_BPDistrict = new javax.swing.JLabel();
-        txt_BPDistrict = new javax.swing.JTextField();
+        lbl_locationID = new javax.swing.JLabel();
+        txt_locationID = new javax.swing.JTextField();
         txt_BPAddress = new javax.swing.JTextField();
-        txt_BPName1 = new javax.swing.JTextField();
-        lbl_BPName1 = new javax.swing.JLabel();
-        txt_BPName2 = new javax.swing.JTextField();
-        lbl_BPName2 = new javax.swing.JLabel();
+        txt_orderDetailPrice = new javax.swing.JTextField();
+        lbl_orderDetailPrice = new javax.swing.JLabel();
+        txt_orderDetailDiscount = new javax.swing.JTextField();
+        lbl_orderDetailDiscount = new javax.swing.JLabel();
         txt_BPDistrict1 = new javax.swing.JTextField();
         lbl_BPDistrict1 = new javax.swing.JLabel();
         pnl_Header = new javax.swing.JPanel();
-        lbl_BusinessPartner = new javax.swing.JLabel();
+        lbl_orderDetail = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        tbl_BP = new javax.swing.JTable();
+        tbl_orderDetail = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -188,46 +188,46 @@ public class orderDetail extends javax.swing.JFrame {
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
-        lbl_BPID.setText("ID");
+        lbl_orderDetailID.setText("ID");
 
-        txt_BPID.setEditable(false);
-        txt_BPID.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        txt_orderDetailID.setEditable(false);
+        txt_orderDetailID.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        lbl_BPName.setText("Quantity");
+        lbl_orderDetailQuantity.setText("Quantity");
 
-        txt_BPName.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        txt_orderDetailQuantity.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        txt_BPEmail.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        txt_orderDetailType.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        lbl_BPEmail.setText("Type");
+        lbl_orderDetailType.setText("Type");
 
-        lbl_BPPhone.setText("Status");
+        lbl_orderDetailStatus.setText("Status");
 
-        txt_BPPhone.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        txt_orderDetailStatus.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        txt_BPCity.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        txt_orderHeaderID.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        lbl_BPCity.setText("Order Header ID");
+        lbl_orderHeaderID.setText("Order Header ID");
 
-        txt_BPTownship.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        txt_inventoryID.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        lbl_BPTownship.setText("Inventory ID");
+        lbl_inventoryID.setText("Inventory ID");
 
         lbl_BPAddress.setText("Remark");
 
-        lbl_BPDistrict.setText("Location ID");
+        lbl_locationID.setText("Location ID");
 
-        txt_BPDistrict.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        txt_locationID.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
         txt_BPAddress.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        txt_BPName1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        txt_orderDetailPrice.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        lbl_BPName1.setText("Price");
+        lbl_orderDetailPrice.setText("Price");
 
-        txt_BPName2.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        txt_orderDetailDiscount.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        lbl_BPName2.setText("Discount");
+        lbl_orderDetailDiscount.setText("Discount");
 
         txt_BPDistrict1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
@@ -240,42 +240,42 @@ public class orderDetail extends javax.swing.JFrame {
             .addGroup(pnl_formLayout.createSequentialGroup()
                 .addGap(25, 25, 25)
                 .addGroup(pnl_formLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(lbl_BPEmail)
-                    .addComponent(lbl_BPPhone)
-                    .addComponent(lbl_BPTownship)
-                    .addComponent(lbl_BPName)
-                    .addComponent(lbl_BPID)
+                    .addComponent(lbl_orderDetailType)
+                    .addComponent(lbl_orderDetailStatus)
+                    .addComponent(lbl_inventoryID)
+                    .addComponent(lbl_orderDetailQuantity)
+                    .addComponent(lbl_orderDetailID)
                     .addComponent(lbl_BPAddress))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(pnl_formLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(txt_BPID)
-                    .addComponent(txt_BPEmail, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txt_orderDetailID)
+                    .addComponent(txt_orderDetailType, javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(pnl_formLayout.createSequentialGroup()
-                        .addComponent(txt_BPTownship, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txt_inventoryID, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(lbl_BPCity)
+                        .addComponent(lbl_orderHeaderID)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txt_BPCity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(lbl_BPDistrict)
+                        .addComponent(txt_orderHeaderID, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(34, 34, 34)
+                        .addComponent(lbl_locationID)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txt_BPDistrict, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 88, Short.MAX_VALUE)
+                        .addComponent(txt_locationID, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(lbl_BPDistrict1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txt_BPDistrict1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(txt_BPPhone, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(txt_BPDistrict1, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txt_orderDetailStatus, javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(txt_BPAddress, javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pnl_formLayout.createSequentialGroup()
-                        .addComponent(txt_BPName, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(27, 27, 27)
-                        .addComponent(lbl_BPName1)
+                        .addComponent(txt_orderDetailQuantity, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(74, 74, 74)
+                        .addComponent(lbl_orderDetailPrice)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txt_BPName1, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(lbl_BPName2)
+                        .addComponent(txt_orderDetailPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
+                        .addComponent(lbl_orderDetailDiscount)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txt_BPName2, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(txt_orderDetailDiscount, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         pnl_formLayout.setVerticalGroup(
@@ -283,32 +283,32 @@ public class orderDetail extends javax.swing.JFrame {
             .addGroup(pnl_formLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(pnl_formLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbl_BPID)
-                    .addComponent(txt_BPID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lbl_orderDetailID)
+                    .addComponent(txt_orderDetailID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(pnl_formLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txt_BPName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lbl_BPName)
-                    .addComponent(txt_BPName1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lbl_BPName1)
-                    .addComponent(txt_BPName2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lbl_BPName2))
+                    .addComponent(txt_orderDetailQuantity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_orderDetailQuantity)
+                    .addComponent(txt_orderDetailPrice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_orderDetailPrice)
+                    .addComponent(txt_orderDetailDiscount, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_orderDetailDiscount))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(pnl_formLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txt_BPEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lbl_BPEmail))
+                    .addComponent(txt_orderDetailType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_orderDetailType))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(pnl_formLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txt_BPPhone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lbl_BPPhone))
+                    .addComponent(txt_orderDetailStatus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_orderDetailStatus))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(pnl_formLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txt_BPTownship, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lbl_BPTownship)
-                    .addComponent(lbl_BPCity)
-                    .addComponent(txt_BPCity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lbl_BPDistrict)
-                    .addComponent(txt_BPDistrict, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txt_inventoryID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_inventoryID)
+                    .addComponent(lbl_orderHeaderID)
+                    .addComponent(txt_orderHeaderID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_locationID)
+                    .addComponent(txt_locationID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lbl_BPDistrict1)
                     .addComponent(txt_BPDistrict1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -318,39 +318,39 @@ public class orderDetail extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        lbl_BusinessPartner.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        lbl_BusinessPartner.setText("Order Detail");
+        lbl_orderDetail.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        lbl_orderDetail.setText("Order Detail");
 
         javax.swing.GroupLayout pnl_HeaderLayout = new javax.swing.GroupLayout(pnl_Header);
         pnl_Header.setLayout(pnl_HeaderLayout);
         pnl_HeaderLayout.setHorizontalGroup(
             pnl_HeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnl_HeaderLayout.createSequentialGroup()
-                .addGap(218, 218, 218)
-                .addComponent(lbl_BusinessPartner)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_HeaderLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(lbl_orderDetail)
+                .addGap(314, 314, 314))
         );
         pnl_HeaderLayout.setVerticalGroup(
             pnl_HeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_HeaderLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(lbl_BusinessPartner, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lbl_orderDetail, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(25, 25, 25))
         );
 
-        tbl_BP.setModel(new javax.swing.table.DefaultTableModel(
+        tbl_orderDetail.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
             new String [] {
-                "ID", "Name", "Class", "Group", "Type"
+                "ID", "Quantity", "Price", "Discount", "Type", "Status", "Inv ID", "OH ID", "Loc ID", "Tax ID"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.String.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
+                java.lang.Integer.class, java.lang.String.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, true, false
+                false, false, false, false, false, false, false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -361,7 +361,10 @@ public class orderDetail extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(tbl_BP);
+        jScrollPane1.setViewportView(tbl_orderDetail);
+        if (tbl_orderDetail.getColumnModel().getColumnCount() > 0) {
+            tbl_orderDetail.getColumnModel().getColumn(0).setMaxWidth(50);
+        }
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -374,15 +377,15 @@ public class orderDetail extends javax.swing.JFrame {
                     .addComponent(jScrollPane1)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(pnl_form, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(layout.createSequentialGroup()
+                                .addComponent(pnl_form, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addGap(0, 0, Short.MAX_VALUE)
                                 .addComponent(pnl_actionButtons, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(59, 59, 59)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGap(137, 137, 137)))
                         .addComponent(pnl_navigationButtons, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(25, 25, 25)))
-                .addContainerGap())
+                        .addGap(25, 25, 25))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -402,6 +405,7 @@ public class orderDetail extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_prevActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_prevActionPerformed
@@ -487,32 +491,32 @@ public class orderDetail extends javax.swing.JFrame {
     private javax.swing.JButton btn_update;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lbl_BPAddress;
-    private javax.swing.JLabel lbl_BPCity;
-    private javax.swing.JLabel lbl_BPDistrict;
     private javax.swing.JLabel lbl_BPDistrict1;
-    private javax.swing.JLabel lbl_BPEmail;
-    private javax.swing.JLabel lbl_BPID;
-    private javax.swing.JLabel lbl_BPName;
-    private javax.swing.JLabel lbl_BPName1;
-    private javax.swing.JLabel lbl_BPName2;
-    private javax.swing.JLabel lbl_BPPhone;
-    private javax.swing.JLabel lbl_BPTownship;
-    private javax.swing.JLabel lbl_BusinessPartner;
+    private javax.swing.JLabel lbl_inventoryID;
+    private javax.swing.JLabel lbl_locationID;
+    private javax.swing.JLabel lbl_orderDetail;
+    private javax.swing.JLabel lbl_orderDetailDiscount;
+    private javax.swing.JLabel lbl_orderDetailID;
+    private javax.swing.JLabel lbl_orderDetailPrice;
+    private javax.swing.JLabel lbl_orderDetailQuantity;
+    private javax.swing.JLabel lbl_orderDetailStatus;
+    private javax.swing.JLabel lbl_orderDetailType;
+    private javax.swing.JLabel lbl_orderHeaderID;
     private javax.swing.JPanel pnl_Header;
     private javax.swing.JPanel pnl_actionButtons;
     private javax.swing.JPanel pnl_form;
     private javax.swing.JPanel pnl_navigationButtons;
-    private javax.swing.JTable tbl_BP;
+    private javax.swing.JTable tbl_orderDetail;
     private javax.swing.JTextField txt_BPAddress;
-    private javax.swing.JTextField txt_BPCity;
-    private javax.swing.JTextField txt_BPDistrict;
     private javax.swing.JTextField txt_BPDistrict1;
-    private javax.swing.JTextField txt_BPEmail;
-    public javax.swing.JTextField txt_BPID;
-    private javax.swing.JTextField txt_BPName;
-    private javax.swing.JTextField txt_BPName1;
-    private javax.swing.JTextField txt_BPName2;
-    private javax.swing.JTextField txt_BPPhone;
-    private javax.swing.JTextField txt_BPTownship;
+    private javax.swing.JTextField txt_inventoryID;
+    private javax.swing.JTextField txt_locationID;
+    private javax.swing.JTextField txt_orderDetailDiscount;
+    public javax.swing.JTextField txt_orderDetailID;
+    private javax.swing.JTextField txt_orderDetailPrice;
+    private javax.swing.JTextField txt_orderDetailQuantity;
+    private javax.swing.JTextField txt_orderDetailStatus;
+    private javax.swing.JTextField txt_orderDetailType;
+    private javax.swing.JTextField txt_orderHeaderID;
     // End of variables declaration//GEN-END:variables
 }

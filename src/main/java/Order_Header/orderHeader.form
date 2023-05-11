@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+<Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
   </Properties>
@@ -32,10 +32,10 @@
                       <Component id="pnl_form" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="pnl_navigationButtons" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="19" max="32767" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace min="-2" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -46,7 +46,10 @@
               <Component id="pnl_Header" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="pnl_form" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
+                      <Component id="pnl_form" min="-2" max="-2" attributes="0"/>
+                  </Group>
                   <Component id="pnl_navigationButtons" alignment="0" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
@@ -65,33 +68,50 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
-                      <Component id="lbl_BPEmail" alignment="1" min="-2" max="-2" attributes="0"/>
-                      <Component id="lbl_BPType" alignment="1" min="-2" max="-2" attributes="0"/>
-                      <Component id="lbl_BPPhone" alignment="1" min="-2" max="-2" attributes="0"/>
-                      <Component id="lbl_BPTownship" alignment="1" min="-2" max="-2" attributes="0"/>
-                      <Component id="lbl_BPName" alignment="1" min="-2" max="-2" attributes="0"/>
-                      <Component id="lbl_BPID" alignment="1" min="-2" max="-2" attributes="0"/>
-                      <Component id="lbl_BPAddress" alignment="1" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_orderHeaderDate" alignment="1" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_userID" alignment="1" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_orderHeaderTransactionType" alignment="1" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_orderHeaderID" alignment="1" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_orderHeaderRemark" alignment="1" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="txt_BPID" alignment="1" max="32767" attributes="0"/>
-                      <Component id="txt_BPName" alignment="0" max="32767" attributes="0"/>
-                      <Component id="txt_BPEmail" alignment="0" max="32767" attributes="0"/>
-                      <Group type="102" alignment="1" attributes="0">
-                          <Component id="txt_BPTownship" min="-2" pref="83" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="lbl_BPCity" min="-2" max="-2" attributes="0"/>
+                      <Component id="txt_orderHeaderID" alignment="1" max="32767" attributes="0"/>
+                      <Component id="txt_orderHeaderTransactionType" alignment="0" max="32767" attributes="0"/>
+                      <Component id="txt_orderHeaderRemark" alignment="0" max="32767" attributes="0"/>
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Component id="txt_userID" min="-2" pref="83" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="lbl_bpID" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <Component id="txt_orderHeaderDate" min="-2" pref="125" max="-2" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Component id="lbl_orderHeaderCurrency" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="txt_BPCity" pref="87" max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="txt_orderHeaderCurrency" max="32767" attributes="0"/>
+                              <Component id="txt_bpID" pref="92" max="32767" attributes="0"/>
+                          </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="lbl_BPDistrict" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Component id="lbl_orderHeaderDiscount" min="-2" max="-2" attributes="0"/>
+                              <Component id="lbl_branchID" min="-2" max="-2" attributes="0"/>
+                          </Group>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="txt_BPDistrict" min="-2" pref="100" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Component id="spinner_discount" min="-2" pref="84" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="txt_branchID" min="-2" pref="106" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
-                      <Component id="txt_BPPhone" alignment="0" max="32767" attributes="0"/>
-                      <Component id="txt_BPAddress" alignment="0" max="32767" attributes="0"/>
-                      <Component id="txt_BPName1" alignment="1" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
@@ -107,42 +127,37 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="lbl_BPID" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="txt_BPID" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_orderHeaderID" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txt_orderHeaderID" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="txt_BPName" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="lbl_BPName" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txt_orderHeaderTransactionType" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_orderHeaderTransactionType" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="lbl_BPType" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="txt_BPName1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_orderHeaderDate" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txt_orderHeaderDate" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_orderHeaderCurrency" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txt_orderHeaderCurrency" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_orderHeaderDiscount" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="spinner_discount" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="txt_userID" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_userID" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_bpID" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txt_bpID" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_branchID" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txt_branchID" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="txt_BPEmail" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="lbl_BPEmail" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="txt_BPPhone" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="lbl_BPPhone" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="txt_BPTownship" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="lbl_BPTownship" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="lbl_BPCity" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="txt_BPCity" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="lbl_BPDistrict" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="txt_BPDistrict" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="txt_BPAddress" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="lbl_BPAddress" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txt_orderHeaderRemark" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_orderHeaderRemark" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="pnl_actionButtons" min="-2" max="-2" attributes="0"/>
@@ -152,12 +167,12 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="lbl_BPID">
+        <Component class="javax.swing.JLabel" name="lbl_orderHeaderID">
           <Properties>
             <Property name="text" type="java.lang.String" value="ID"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="txt_BPID">
+        <Component class="javax.swing.JTextField" name="txt_orderHeaderID">
           <Properties>
             <Property name="editable" type="boolean" value="false"/>
             <Property name="horizontalAlignment" type="int" value="4"/>
@@ -167,82 +182,72 @@
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
           </AuxValues>
         </Component>
-        <Component class="javax.swing.JLabel" name="lbl_BPName">
+        <Component class="javax.swing.JLabel" name="lbl_orderHeaderTransactionType">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Transaction Type"/>
+            <Property name="text" type="java.lang.String" value="Type"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="txt_BPName">
+        <Component class="javax.swing.JTextField" name="txt_orderHeaderTransactionType">
           <Properties>
             <Property name="horizontalAlignment" type="int" value="4"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="lbl_BPType">
+        <Component class="javax.swing.JLabel" name="lbl_orderHeaderDate">
           <Properties>
             <Property name="text" type="java.lang.String" value="Date"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="txt_BPEmail">
-          <Properties>
-            <Property name="horizontalAlignment" type="int" value="4"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="lbl_BPEmail">
+        <Component class="javax.swing.JLabel" name="lbl_orderHeaderDiscount">
           <Properties>
             <Property name="text" type="java.lang.String" value="Discount"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="lbl_BPPhone">
+        <Component class="javax.swing.JLabel" name="lbl_orderHeaderCurrency">
           <Properties>
             <Property name="text" type="java.lang.String" value="Currency"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="txt_BPPhone">
+        <Component class="javax.swing.JTextField" name="txt_orderHeaderCurrency">
           <Properties>
             <Property name="horizontalAlignment" type="int" value="4"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="txt_BPCity">
+        <Component class="javax.swing.JTextField" name="txt_bpID">
           <Properties>
             <Property name="horizontalAlignment" type="int" value="4"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="lbl_BPCity">
+        <Component class="javax.swing.JLabel" name="lbl_bpID">
           <Properties>
             <Property name="text" type="java.lang.String" value="Business Partner ID"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="txt_BPTownship">
+        <Component class="javax.swing.JTextField" name="txt_userID">
           <Properties>
             <Property name="horizontalAlignment" type="int" value="4"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="lbl_BPTownship">
+        <Component class="javax.swing.JLabel" name="lbl_userID">
           <Properties>
             <Property name="text" type="java.lang.String" value="User ID"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="lbl_BPAddress">
+        <Component class="javax.swing.JLabel" name="lbl_orderHeaderRemark">
           <Properties>
             <Property name="text" type="java.lang.String" value="Remark"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="lbl_BPDistrict">
+        <Component class="javax.swing.JLabel" name="lbl_branchID">
           <Properties>
             <Property name="text" type="java.lang.String" value="Branch ID"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="txt_BPDistrict">
+        <Component class="javax.swing.JTextField" name="txt_branchID">
           <Properties>
             <Property name="horizontalAlignment" type="int" value="4"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="txt_BPAddress">
-          <Properties>
-            <Property name="horizontalAlignment" type="int" value="4"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="txt_BPName1">
+        <Component class="javax.swing.JTextField" name="txt_orderHeaderRemark">
           <Properties>
             <Property name="horizontalAlignment" type="int" value="4"/>
           </Properties>
@@ -334,6 +339,25 @@
             </Component>
           </SubComponents>
         </Container>
+        <Component class="javax.swing.JFormattedTextField" name="txt_orderHeaderDate">
+          <Properties>
+            <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor">
+              <Format subtype="0" type="1"/>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JSpinner" name="spinner_discount">
+          <Properties>
+            <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
+              <SpinnerModel initial="0" maximum="100" minimum="0" numberType="java.lang.Integer" stepSize="1" type="number"/>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="%"/>
+          </Properties>
+        </Component>
       </SubComponents>
     </Container>
     <Container class="javax.swing.JPanel" name="pnl_Header">
@@ -342,8 +366,8 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="261" max="-2" attributes="0"/>
-                  <Component id="lbl_BusinessPartner" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="236" max="-2" attributes="0"/>
+                  <Component id="lbl_orderHeader" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
@@ -352,14 +376,14 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace max="32767" attributes="0"/>
-                  <Component id="lbl_BusinessPartner" min="-2" pref="32" max="-2" attributes="0"/>
+                  <Component id="lbl_orderHeader" min="-2" pref="32" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="lbl_BusinessPartner">
+        <Component class="javax.swing.JLabel" name="lbl_orderHeader">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="24" style="1"/>
@@ -376,16 +400,63 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
-        <Component class="javax.swing.JTable" name="tbl_BP">
+        <Component class="javax.swing.JTable" name="tbl_orderHeader">
           <Properties>
             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-              <Table columnCount="5" rowCount="0">
+              <Table columnCount="8" rowCount="0">
                 <Column editable="false" title="ID" type="java.lang.Integer"/>
-                <Column editable="false" title="Name" type="java.lang.String"/>
-                <Column editable="false" title="Class" type="java.lang.Object"/>
-                <Column editable="true" title="Group" type="java.lang.Object"/>
-                <Column editable="false" title="Type" type="java.lang.Object"/>
+                <Column editable="false" title="Type" type="java.lang.String"/>
+                <Column editable="false" title="Date" type="java.lang.Object"/>
+                <Column editable="false" title="Currency" type="java.lang.Object"/>
+                <Column editable="false" title="Discount" type="java.lang.Object"/>
+                <Column editable="false" title="User ID" type="java.lang.Object"/>
+                <Column editable="false" title="BP ID" type="java.lang.Object"/>
+                <Column editable="false" title="Branch ID" type="java.lang.Object"/>
               </Table>
+            </Property>
+            <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
+              <TableColumnModel selectionModel="0">
+                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+              </TableColumnModel>
             </Property>
             <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
               <TableHeader reorderingAllowed="true" resizingAllowed="true"/>

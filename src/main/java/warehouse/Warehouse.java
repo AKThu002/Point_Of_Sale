@@ -33,26 +33,26 @@ public class Warehouse extends javax.swing.JFrame {
         btn_update = new javax.swing.JButton();
         btn_exit = new javax.swing.JButton();
         pnl_form = new javax.swing.JPanel();
-        lbl_BPID = new javax.swing.JLabel();
-        txt_BPID = new javax.swing.JTextField();
-        lbl_BPName = new javax.swing.JLabel();
-        txt_BPName = new javax.swing.JTextField();
-        txt_BPEmail = new javax.swing.JTextField();
-        lbl_BPEmail = new javax.swing.JLabel();
-        txt_BPJoinDate = new javax.swing.JTextField();
-        lbl_BPStatus = new javax.swing.JLabel();
-        lbl_BPPhone = new javax.swing.JLabel();
-        txt_BPPhone = new javax.swing.JTextField();
-        txt_BPTownship = new javax.swing.JTextField();
-        lbl_BPTownship = new javax.swing.JLabel();
-        txt_BPStatus = new javax.swing.JTextField();
-        lbl_BPJoinDate = new javax.swing.JLabel();
-        lbl_BPDistrict = new javax.swing.JLabel();
-        txt_BPDistrict = new javax.swing.JTextField();
+        lbl_warehouseID = new javax.swing.JLabel();
+        txt_warehouseID = new javax.swing.JTextField();
+        lbl_warehouseName = new javax.swing.JLabel();
+        txt_warehouseName = new javax.swing.JTextField();
+        txt_warehouseAddress1 = new javax.swing.JTextField();
+        lbl_warehouseAddress1 = new javax.swing.JLabel();
+        txt_warehouseStatus = new javax.swing.JTextField();
+        lbl_warehousePostalCode = new javax.swing.JLabel();
+        lbl_warehouseAddress2 = new javax.swing.JLabel();
+        txt_warehouseAddress2 = new javax.swing.JTextField();
+        txt_warehouseLattitude = new javax.swing.JTextField();
+        lbl_warehouseLattitude = new javax.swing.JLabel();
+        txt_warehousePostalCode = new javax.swing.JTextField();
+        lbl_warehouseStatus = new javax.swing.JLabel();
+        lbl_warehouseLongitude = new javax.swing.JLabel();
+        txt_warehouseLongitude = new javax.swing.JTextField();
         pnl_Header = new javax.swing.JPanel();
-        lbl_BusinessPartner = new javax.swing.JLabel();
+        lbl_warehouse = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        tbl_BP = new javax.swing.JTable();
+        tbl_warehouse = new javax.swing.JTable();
         pnl_navigationButtons = new javax.swing.JPanel();
         btn_prev = new javax.swing.JButton();
         btn_next = new javax.swing.JButton();
@@ -131,38 +131,38 @@ public class Warehouse extends javax.swing.JFrame {
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
-        lbl_BPID.setText("ID");
+        lbl_warehouseID.setText("ID");
 
-        txt_BPID.setEditable(false);
-        txt_BPID.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        txt_warehouseID.setEditable(false);
+        txt_warehouseID.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        lbl_BPName.setText("Name");
+        lbl_warehouseName.setText("Name");
 
-        txt_BPName.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        txt_warehouseName.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        txt_BPEmail.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        txt_warehouseAddress1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        lbl_BPEmail.setText("Address 1");
+        lbl_warehouseAddress1.setText("Address 1");
 
-        txt_BPJoinDate.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        txt_warehouseStatus.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        lbl_BPStatus.setText("Postal Code");
+        lbl_warehousePostalCode.setText("Postal Code");
 
-        lbl_BPPhone.setText("Address 2");
+        lbl_warehouseAddress2.setText("Address 2");
 
-        txt_BPPhone.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        txt_warehouseAddress2.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        txt_BPTownship.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        txt_warehouseLattitude.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        lbl_BPTownship.setText("Lattitude");
+        lbl_warehouseLattitude.setText("Lattitude");
 
-        txt_BPStatus.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        txt_warehousePostalCode.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        lbl_BPJoinDate.setText("Status");
+        lbl_warehouseStatus.setText("Status");
 
-        lbl_BPDistrict.setText("Longitude");
+        lbl_warehouseLongitude.setText("Longitude");
 
-        txt_BPDistrict.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        txt_warehouseLongitude.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
         javax.swing.GroupLayout pnl_formLayout = new javax.swing.GroupLayout(pnl_form);
         pnl_form.setLayout(pnl_formLayout);
@@ -171,30 +171,30 @@ public class Warehouse extends javax.swing.JFrame {
             .addGroup(pnl_formLayout.createSequentialGroup()
                 .addGap(25, 25, 25)
                 .addGroup(pnl_formLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(lbl_BPEmail)
-                    .addComponent(lbl_BPPhone)
-                    .addComponent(lbl_BPTownship)
-                    .addComponent(lbl_BPName)
-                    .addComponent(lbl_BPID)
-                    .addComponent(lbl_BPJoinDate))
+                    .addComponent(lbl_warehouseAddress1)
+                    .addComponent(lbl_warehouseAddress2)
+                    .addComponent(lbl_warehouseLattitude)
+                    .addComponent(lbl_warehouseName)
+                    .addComponent(lbl_warehouseID)
+                    .addComponent(lbl_warehouseStatus))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(pnl_formLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txt_BPID, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(txt_BPName)
-                    .addComponent(txt_BPEmail)
-                    .addComponent(txt_BPPhone)
+                    .addComponent(txt_warehouseID, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(txt_warehouseName)
+                    .addComponent(txt_warehouseAddress1)
+                    .addComponent(txt_warehouseAddress2)
                     .addGroup(pnl_formLayout.createSequentialGroup()
                         .addGroup(pnl_formLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(txt_BPTownship)
-                            .addComponent(txt_BPJoinDate, javax.swing.GroupLayout.DEFAULT_SIZE, 180, Short.MAX_VALUE))
+                            .addComponent(txt_warehouseLattitude)
+                            .addComponent(txt_warehouseStatus, javax.swing.GroupLayout.DEFAULT_SIZE, 180, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(pnl_formLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(lbl_BPStatus)
-                            .addComponent(lbl_BPDistrict))
+                            .addComponent(lbl_warehousePostalCode)
+                            .addComponent(lbl_warehouseLongitude))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(pnl_formLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txt_BPDistrict, javax.swing.GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE)
-                            .addComponent(txt_BPStatus))))
+                            .addComponent(txt_warehouseLongitude, javax.swing.GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE)
+                            .addComponent(txt_warehousePostalCode))))
                 .addContainerGap())
         );
         pnl_formLayout.setVerticalGroup(
@@ -202,37 +202,37 @@ public class Warehouse extends javax.swing.JFrame {
             .addGroup(pnl_formLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(pnl_formLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbl_BPID)
-                    .addComponent(txt_BPID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lbl_warehouseID)
+                    .addComponent(txt_warehouseID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(pnl_formLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txt_BPName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lbl_BPName))
+                    .addComponent(txt_warehouseName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_warehouseName))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(pnl_formLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txt_BPEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lbl_BPEmail))
+                    .addComponent(txt_warehouseAddress1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_warehouseAddress1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(pnl_formLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txt_BPPhone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lbl_BPPhone))
+                    .addComponent(txt_warehouseAddress2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_warehouseAddress2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(pnl_formLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txt_BPTownship, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lbl_BPTownship)
-                    .addComponent(lbl_BPDistrict)
-                    .addComponent(txt_BPDistrict, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txt_warehouseLattitude, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_warehouseLattitude)
+                    .addComponent(lbl_warehouseLongitude)
+                    .addComponent(txt_warehouseLongitude, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(pnl_formLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txt_BPJoinDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lbl_BPJoinDate)
-                    .addComponent(txt_BPStatus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lbl_BPStatus))
+                    .addComponent(txt_warehouseStatus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_warehouseStatus)
+                    .addComponent(txt_warehousePostalCode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_warehousePostalCode))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        lbl_BusinessPartner.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        lbl_BusinessPartner.setText("Warehouse");
+        lbl_warehouse.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        lbl_warehouse.setText("Warehouse");
 
         javax.swing.GroupLayout pnl_HeaderLayout = new javax.swing.GroupLayout(pnl_Header);
         pnl_Header.setLayout(pnl_HeaderLayout);
@@ -240,18 +240,18 @@ public class Warehouse extends javax.swing.JFrame {
             pnl_HeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnl_HeaderLayout.createSequentialGroup()
                 .addGap(232, 232, 232)
-                .addComponent(lbl_BusinessPartner)
+                .addComponent(lbl_warehouse)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         pnl_HeaderLayout.setVerticalGroup(
             pnl_HeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_HeaderLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(lbl_BusinessPartner, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lbl_warehouse, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(25, 25, 25))
         );
 
-        tbl_BP.setModel(new javax.swing.table.DefaultTableModel(
+        tbl_warehouse.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -274,7 +274,7 @@ public class Warehouse extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(tbl_BP);
+        jScrollPane1.setViewportView(tbl_warehouse);
 
         btn_prev.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -450,27 +450,27 @@ public class Warehouse extends javax.swing.JFrame {
     private javax.swing.JButton btn_prev;
     private javax.swing.JButton btn_update;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JLabel lbl_BPDistrict;
-    private javax.swing.JLabel lbl_BPEmail;
-    private javax.swing.JLabel lbl_BPID;
-    private javax.swing.JLabel lbl_BPJoinDate;
-    private javax.swing.JLabel lbl_BPName;
-    private javax.swing.JLabel lbl_BPPhone;
-    private javax.swing.JLabel lbl_BPStatus;
-    private javax.swing.JLabel lbl_BPTownship;
-    private javax.swing.JLabel lbl_BusinessPartner;
+    private javax.swing.JLabel lbl_warehouse;
+    private javax.swing.JLabel lbl_warehouseAddress1;
+    private javax.swing.JLabel lbl_warehouseAddress2;
+    private javax.swing.JLabel lbl_warehouseID;
+    private javax.swing.JLabel lbl_warehouseLattitude;
+    private javax.swing.JLabel lbl_warehouseLongitude;
+    private javax.swing.JLabel lbl_warehouseName;
+    private javax.swing.JLabel lbl_warehousePostalCode;
+    private javax.swing.JLabel lbl_warehouseStatus;
     private javax.swing.JPanel pnl_Header;
     private javax.swing.JPanel pnl_actionButtons;
     private javax.swing.JPanel pnl_form;
     private javax.swing.JPanel pnl_navigationButtons;
-    private javax.swing.JTable tbl_BP;
-    private javax.swing.JTextField txt_BPDistrict;
-    private javax.swing.JTextField txt_BPEmail;
-    public javax.swing.JTextField txt_BPID;
-    private javax.swing.JTextField txt_BPJoinDate;
-    private javax.swing.JTextField txt_BPName;
-    private javax.swing.JTextField txt_BPPhone;
-    private javax.swing.JTextField txt_BPStatus;
-    private javax.swing.JTextField txt_BPTownship;
+    private javax.swing.JTable tbl_warehouse;
+    private javax.swing.JTextField txt_warehouseAddress1;
+    private javax.swing.JTextField txt_warehouseAddress2;
+    public javax.swing.JTextField txt_warehouseID;
+    private javax.swing.JTextField txt_warehouseLattitude;
+    private javax.swing.JTextField txt_warehouseLongitude;
+    private javax.swing.JTextField txt_warehouseName;
+    private javax.swing.JTextField txt_warehousePostalCode;
+    private javax.swing.JTextField txt_warehouseStatus;
     // End of variables declaration//GEN-END:variables
 }
